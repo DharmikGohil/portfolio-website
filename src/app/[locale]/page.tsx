@@ -12,7 +12,7 @@ import { useTranslations } from 'next-intl';
 export async function generateMetadata(
 	{params: {locale}}: { params: { locale: string }}
 ) {
-	const t = await getTranslations();
+	const t = await getTranslations({locale});
     const { home } = renderContent(t);
 	const title = home.title;
 	const description = home.description;

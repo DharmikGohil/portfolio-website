@@ -8,7 +8,7 @@ export async function generateMetadata(
 	{params: {locale}}: { params: { locale: string }}
 ) {
 
-	const t = await getTranslations();
+	const t = await getTranslations({locale});
 	const { gallery } = renderContent(t);
 
 	const title = gallery.title;
