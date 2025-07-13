@@ -78,7 +78,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             )}
             {images.length > 1 && (
                 <Flex
-                    gap="3" paddingX="s"
+                    gap="4" paddingX="s"
                     fillWidth
                     justifyContent="center">
                     {images.map((_, index) => (

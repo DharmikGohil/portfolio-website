@@ -3,7 +3,7 @@
 import React, { forwardRef } from 'react';
 import classNames from 'classnames';
 import { IconType } from 'react-icons';
-import { iconLibrary } from '../icons.tsx';
+import { iconLibrary } from '../icons';
 import { ColorScheme, ColorWeight } from '../types';
 
 const sizeMap: Record<string, string> = {

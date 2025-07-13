@@ -98,7 +98,7 @@ export default function Home(
 								{home.subline}
 							</Text>
 						</RevealFx>
-						<RevealFx translateY="6" delay={0.2}>
+						<RevealFx translateY={6} delay={0.2}>
 							<Flex fillWidth>
 								<Button
 									id="about"
@@ -124,12 +124,12 @@ export default function Home(
 					</Flex>
 				
 			</Flex>
-			<RevealFx translateY="8" delay={0.3}>
+			<RevealFx translateY={8} delay={0.3}>
 				<Projects range={[1, 1]} locale={locale}/>
 			</RevealFx>
 
 			{/* Skills & Technologies Showcase */}
-			<RevealFx translateY="10" delay={0.4}>
+			<RevealFx translateY={10} delay={0.4}>
 				<Flex fillWidth direction="column" gap="m" paddingX="l" marginBottom="40">
 					<Heading as="h2" variant="display-strong-xs" wrap="balance">Skills & Technologies</Heading>
 					<Text variant="body-default-l">Backend: Node.js, Express, AWS Lambda, REST APIs, Event-Driven Architecture, TDD</Text>
@@ -140,7 +140,7 @@ export default function Home(
 			</RevealFx>
 
 			{/* Technical Blog Posts Section */}
-			<RevealFx translateY="12" delay={0.5}>
+			<RevealFx translateY={12} delay={0.5}>
 				<Flex fillWidth direction="column" gap="m" paddingX="l" marginBottom="40">
 					<Heading as="h2" variant="display-strong-xs" wrap="balance">Technical Blog Posts</Heading>
 					<Posts range={[1,2]} columns="2" locale={locale}/>
