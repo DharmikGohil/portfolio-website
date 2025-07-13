@@ -15,6 +15,8 @@ import { getMessages, getTranslations, unstable_setRequestLocale } from 'next-in
 import { routing } from "@/i18n/routing";
 import { renderContent } from "@/app/resources";
 import { Background, Flex } from "@/once-ui/components";
+import GlobalLoading from '@/components/GlobalLoading';
+import CommandPalette from '@/components/CommandPalette';
 
 export async function generateMetadata(
 	{ params: { locale }}: { params: { locale: string }}
@@ -105,10 +107,12 @@ export default async function RootLayout({
 					secondary ? secondary.variable : '',
 					tertiary ? tertiary.variable : '',
 					code.variable)}>
-				<Flex style={{minHeight: '100vh'}}
+				<Flex style={{minHeight: '100vh'} }
 					as="body"
 					fillWidth margin="0" padding="0"
 					direction="column">
+					<CommandPalette />
+					<GlobalLoading />
 					<Background
 						mask={effects.mask as any}
 						gradient={effects.gradient as any}

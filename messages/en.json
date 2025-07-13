@@ -1,81 +1,84 @@
 {
     "person": {
-        "role": "Design Engineer"
+        "role": "Backend + Data + AI Engineer"
     },
     "newsletter": {
         "title": "Subscribe to {firstName}'s Newsletter",
-        "description": "I occasionally write about design, technology, and share thoughts on the intersection of creativity and engineering",
+        "description": "I occasionally write about backend engineering, system design, and share insights on building scalable architectures and AI systems",
         "button": "Sign up"
     },
     "home": {
         "label": "Home",
         "title": "{name}'s Portfolio",
-        "description": "Portfolio website showcasing my work as a {role}",
-        "headline": "Design engineer and builder",
-        "subline": "I'm Selene, a design engineer at FLY, where I craft intuitive user experiences. After hours, I build my own projects."
+        "description": "Backend + Data + AI Engineer specializing in system design, RAG chatbots, and scalable architectures",
+        "headline": "Backend + Data + AI Engineer",
+        "subline": "I'm Dharmik, currently working at Avesta Technologies where I design RAG-based chatbots and serverless data processing pipelines. I'm passionate about clean architecture, test-driven development, and building systems that are reliable, performant, and easy to maintain."
     },
     "about": {
         "label": "About",
         "title": "About me",
-        "description": "Meet {name}, {role} from {location}",
+        "description": "Meet {name}, {role} from Ahmedabad, Gujarat",
         "intro": {
             "title": "Introduction",
-            "description": "Selene is a Jakarta-based design engineer with a passion for transforming complex challenges into simple, elegant design solutions. Her work spans digital interfaces, interactive experiences, and the convergence of design and technology."
+            "description": "I'm a Backend + Data + AI Engineer passionate about system design and building scalable, event-driven architectures. I currently work at Avesta Technologies where I am currently designing RAG-based chatbots and serverless data processing pipelines using AWS Lambda, PostgreSQL, and Elasticsearch. I strongly believe in writing clean code, practicing with test-driven development, and building systems that are reliable, performant, and easy to maintain."
         },
         "work": {
             "title": "Work Experience",
             "experiences": {
-                "FLY": {
-                    "timeframe": "2022 - Present",
-                    "role": "Senior Design Engineer",
-                    "achievements": "Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.;Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster."
+                "Avesta Technologies": {
+                    "timeframe": "Apr 2025 - Present",
+                    "role": "Backend AI Software Engineer",
+                    "achievements": "Currently building an RAG-based pipeline for a knowledge-based chatbot using event-driven architecture;Implemented AWS Lambda functions to process/manage data from PostgreSQL and Elasticsearch;Built serverless backend systems with a focus on cost-efficiency, scalability, and clean code;Practiced TDD, modular development, and layered design principles"
                 },
-                "Creativ3": {
-                    "timeframe": "2018 - 2022",
-                    "role": "Lead Designer",
-                    "achievements": "Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.;Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue."
+                "Avesta Technologies Intern": {
+                    "timeframe": "Jul 2024 - Apr 2025",
+                    "role": "Backend Developer Intern",
+                    "achievements": "Developed RESTful APIs using Node.js + Express with focus on OOP and TDD;Applied system design principles for scalable applications;Hands-on experience with MySQL, Elasticsearch, AWS services, and Linux;Focused on clean architecture, efficient data flow, and production-grade code"
                 }
             }
         },
         "studies": {
-            "title": "Studies",
+            "title": "Education",
             "institutions": {
-                "University of Jakarta": {
-                    "description": "Studied software engineering."
+                "Vishwakarma Government Engineering College": {
+                    "description": "Bachelor of Engineering in Computer Engineering (CGPA: 8.37/10)"
                 },
-                "Build the Future": {
-                    "description": "Studied online marketing and personal branding."
+                "Shree Swaminarayan Gurukul, Taravada": {
+                    "description": "12th Science (GSHEB) - 82.16% | 10th Standard (GSEB) - 94.17% | JEE Mains Score: 90.14%"
                 }
             }
         },
         "technical": {
-            "title": "Technical skills",
+            "title": "Technical Skills",
             "skills": {
-                "Figma": {
-                    "description": "Able to prototype in Figma with Once UI with unnatural speed."
+                "Backend Development": {
+                    "description": "Node.js, Express.js, AWS Lambda, REST APIs, Event-Driven Architecture, Clean Code Principles, TDD"
                 },
-                "Nextjs": {
-                    "description": "Building next gen apps with Next.js + Once UI + Supabase."
+                "Databases & Search": {
+                    "description": "PostgreSQL, MySQL, Elasticsearch, Data Processing, Serverless Architecture"
+                },
+                "Programming Languages": {
+                    "description": "JavaScript/TypeScript, Python, PHP, C#, SQL with focus on OOP and system design"
                 }
             }
         }
     },
     "blog": {
         "label": "Blog",
-        "title": "Writing about design and tech...",
+        "title": "Writing about backend engineering and system design...",
         "description": "Read what {name} has been up to recently"
     },
     "work": {
         "label": "Work",
         "title": "My projects",
-        "description": "Design and dev projects by {name}"
+        "description": "Backend and AI projects by {name}"
     },
-    "gallery": {
-        "label": "Gallery",
-        "title": "My photo gallery",
-        "description": "A photo collection by {name}"
+    "helpfulStuff": {
+        "label": "Helpful Stuff",
+        "title": "Helpful Stuff",
+        "description": "A collection of bookmarks, helpful videos, docs, crash courses, and more by {name}"
     },
     "projectCard": {
-        "label": "Read Case Study"
+        "label": "View Project"
     }
 }

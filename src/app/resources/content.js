@@ -6,21 +6,19 @@ const person = {
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
-    role:      'Design Engineer',
+    role:      'Backend + Data + AI Engineer',
     avatar:    '/images/avatar.jpg',
-    location:  'Asia/Kolkata',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ['English', 'Hindi', 'Gujarati']  // optional: Leave the array empty if you don't want to display languages
+    location:  'Ahmedabad, Gujarat, India',
+    languages: ['English', 'Hindi', 'Gujarati']
 }
 
 const newsletter = {
     display: true,
     title: <>Subscribe to {person.firstName}'s Newsletter</>,
-    description: <>I occasionally write about design, technology, and share thoughts on the intersection of creativity and engineering.</>
+    description: <>I occasionally write about backend engineering, system design, and share insights on building scalable architectures and AI systems.</>
 }
 
 const social = [
-    // Links are automatically displayed.
-    // Import new icons in /once-ui/icons.ts
     {
         name: 'GitHub',
         icon: 'github',
@@ -29,32 +27,37 @@ const social = [
     {
         name: 'LinkedIn',
         icon: 'linkedin',
-        link: 'https://www.linkedin.com/dharmikgohil',
+        link: 'https://linkedin.com/in/dharmikgohil',
     },
     {
-        name: 'X',
-        icon: 'x',
-        link: '',
+        name: 'LeetCode',
+        icon: 'leetcode',
+        link: 'http://leetcode.com/dharmikgohil',
     },
     {
         name: 'Email',
         icon: 'email',
         link: 'mailto:gohildharmik2020@gmail.com',
     },
+    {
+        name: 'Twitter',
+        icon: 'x',
+        link: 'http://x.com/dharmikgohil_',
+    },
 ]
 
 const home = {
     label: 'Home',
     title: `${person.name}'s Portfolio`,
-    description: `Portfolio website showcasing my work as a ${person.role}`,
-    headline: <>Backend Software Engineer</>,
-    subline: <>I'm Dharmik, currently doing my backend sofware engineer internship at <InlineCode>Avesta Technologies</InlineCode></>
+    description: `Backend + Data + AI Engineer specializing in system design, RAG chatbots, and scalable architectures`,
+    headline: <>Backend + Data + AI Engineer</>,
+    subline: <>I'm Dharmik, currently working at <InlineCode>Avesta Technologies</InlineCode> where I design RAG-based chatbots and serverless data processing pipelines. I'm passionate about clean architecture, TDD, and building systems that are reliable, performant, and easy to maintain.</>
 }
 
 const about = {
     label: 'About',
     title: 'About me',
-    description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+    description: `Meet ${person.name}, ${person.role} from Ahmedabad, Gujarat`,
     tableOfContent: {
         display: true,
         subItems: false
@@ -64,121 +67,136 @@ const about = {
     },
     calendar: {
         display: true,
-        link: 'https://cal.com'
+        link: 'https://cal.com/dharmikgohil'
     },
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>Selene is a Jakarta-based design engineer with a passion for transforming complex challenges into simple, elegant design solutions. Her work spans digital interfaces, interactive experiences, and the convergence of design and technology.</>
+        description: <>I'm a Backend + Data + AI Engineer passionate about system design and building scalable, event-driven architectures. I currently work at Avesta Technologies where I design RAG-based chatbots and serverless data processing pipelines using AWS Lambda, PostgreSQL, and Elasticsearch. I strongly believe in writing clean code, practicing TDD, and building systems that are reliable, performant, and easy to maintain.</>
     },
     work: {
-        display: true, // set to false to hide this section
+        display: true,
         title: 'Work Experience',
         experiences: [
             {
-                company: 'FLY',
-                timeframe: '2022 - Present',
-                role: 'Senior Design Engineer',
+                company: 'Avesta Technologies',
+                timeframe: 'Apr 2025 - Present',
+                role: 'Backend AI Software Engineer',
                 achievements: [
-                    <>Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.</>,
-                    <>Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.</>
+                    <>Currently building an RAG-based pipeline for a knowledge-based chatbot using event-driven architecture</>,
+                    <>Implemented AWS Lambda functions to process/manage data from PostgreSQL and Elasticsearch</>,
+                    <>Built serverless backend systems with a focus on cost-efficiency, scalability, and clean code</>,
+                    <>Practiced TDD, modular development, and layered design principles</>
                 ],
-                images: [ // optional: leave the array empty if you don't want to display images
-                    {
-                        src: '/images/projects/project-01/cover-01.jpg',
-                        alt: 'Once UI Project',
-                        width: 16,
-                        height: 9
-                    }
-                ]
+                images: []
             },
             {
-                company: 'Creativ3',
-                timeframe: '2018 - 2022',
-                role: 'Lead Designer',
+                company: 'Avesta Technologies',
+                timeframe: 'Jul 2024 - Apr 2025',
+                role: 'Backend Developer Intern',
                 achievements: [
-                    <>Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.</>,
-                    <>Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue.</>
+                    <>Developed RESTful APIs using Node.js + Express with focus on OOP and TDD</>,
+                    <>Applied system design principles for scalable applications</>,
+                    <>Hands-on experience with MySQL, Elasticsearch, AWS services, and Linux</>,
+                    <>Focused on clean architecture, efficient data flow, and production-grade code</>
                 ],
-                images: [ ]
+                images: []
             }
         ]
     },
     studies: {
-        display: true, // set to false to hide this section
-        title: 'Studies',
+        display: true,
+        title: 'Education',
         institutions: [
             {
-                name: 'University of Jakarta',
-                description: <>Studied software engineering.</>,
+                name: 'Vishwakarma Government Engineering College',
+                description: <>Bachelor of Engineering in Computer Engineering (CGPA: 8.37/10)</>,
             },
             {
-                name: 'Build the Future',
-                description: <>Studied online marketing and personal branding.</>,
+                name: 'Shree Swaminarayan Gurukul, Taravada',
+                description: <>12th Science (GSHEB) - 82.16% | 10th Standard (GSEB) - 94.17% | JEE Mains Score: 90.14%</>,
             }
         ]
     },
     technical: {
-        display: true, // set to false to hide this section
-        title: 'Technical skills',
+        display: true,
+        title: 'Technical Skills',
         skills: [
             {
-                title: 'Figma',
-                description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-                // optional: leave the array empty if you don't want to display images
-                images: [
-                    {
-                        src: '/images/projects/project-01/cover-02.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
-                    {
-                        src: '/images/projects/project-01/cover-03.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
-                ]
+                title: 'Backend Development',
+                description: <>Node.js, Express.js, AWS Lambda, REST APIs, Event-Driven Architecture, Clean Code Principles, TDD</>,
+                images: []
             },
             {
-                title: 'Next.js',
-                description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-                // optional: leave the array empty if you don't want to display images
-                images: [
-                    {
-                        src: '/images/projects/project-01/cover-04.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
-                ]
+                title: 'Databases & Search',
+                description: <>PostgreSQL, MySQL, Elasticsearch, Data Processing, Serverless Architecture</>,
+                images: []
+            },
+            {
+                title: 'Programming Languages',
+                description: <>JavaScript/TypeScript, Java, Python, C#, SQL with focus on OOP and system design</>,
+                images: []
             }
+        ]
+    },
+    certifications: {
+        display: true,
+        title: 'Certifications & Achievements',
+        items: [
+            'Won an AI Hackathon at Avesta Technologies',
+            'Solved 300+ problems on LeetCode'
+        ]
+    },
+    challenges: {
+        display: true,
+        title: 'Technical Challenges & Solutions',
+        cases: [
+            {
+                title: 'Scaling RAG Chatbot Pipeline',
+                description: 'Designed event-driven, serverless architecture for high-throughput document ingestion and semantic search.'
+            },
+            {
+                title: 'Performance Optimization',
+                description: 'Reduced Lambda cold start times and improved query latency in vector search.'
+            }
+        ]
+    },
+    learning: {
+        display: true,
+        title: 'Learning & Growth',
+        items: [
+            'Currently reading: Designing Data-Intensive Applications',
+            'Exploring: Generative AI, RAG, AI Agents, LLMOps, DevOps'
+        ]
+    },
+    professional: {
+        display: true,
+        title: 'Professional Development',
+        items: [
+            'Developed a RAG-based chatbot for a knowledge-based application',
+            'Developed a serverless data processing pipeline for a knowledge-based application',
+            'Write clean and maintainable code with Tests'
         ]
     }
 }
 
 const blog = {
     label: 'Blog',
-    title: 'Writing about design and tech...',
+    title: 'Writing about backend engineering and system design...',
     description: `Read what ${person.name} has been up to recently`
-    // Create new blog posts by adding a new .mdx file to app/blog/posts
-    // All posts will be listed on the /blog route
 }
 
 const work = {
     label: 'Work',
     title: 'My projects',
-    description: `Design and dev projects by ${person.name}`
-    // Create new project pages by adding a new .mdx file to app/blog/posts
-    // All projects will be listed on the /home and /work routes
+    description: `Backend and AI projects by ${person.name}`
 }
 
-const gallery = {
-    label: 'Gallery',
-    title: 'My photo gallery',
-    description: `A photo collection by ${person.name}`,
-    // Images from https://pexels.com
+const helpfulStuff = {
+    label: 'Helpful Stuff',
+    title: 'Helpful Stuff',
+    description: `A collection of bookmarks, helpful videos, docs, crash courses, and more by ${person.name}`,
+    // Optionally, keep images or replace with resources array later
     images: [
         { 
             src: '/images/gallery/img-01.jpg', 
@@ -248,9 +266,9 @@ const gallery = {
         { 
             src: '/images/gallery/img-14.jpg', 
             alt: 'image',
-            orientation: 'horizontal'
-        },
+            orientation: 'vertical'
+        }
     ]
 }
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, newsletter, social, home, about, blog, work, helpfulStuff };

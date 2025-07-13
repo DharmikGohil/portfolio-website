@@ -1,6 +1,6 @@
 import { Avatar, Button, Flex, Heading, Icon, IconButton, SmartImage, Tag, Text } from '@/once-ui/components';
 import { baseURL, renderContent } from '@/app/resources';
-import TableOfContents from '@/components/about/TableOfContents';
+import ScrollProgressIndicator from '@/components/about/ScrollProgressIndicator';
 import styles from '@/components/about/about.module.scss'
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
@@ -92,17 +92,9 @@ export default function About(
                     }),
                 }}
             />
-            { about.tableOfContent.display && (
-                <Flex
-                    style={{ left: '0', top: '50%', transform: 'translateY(-50%)' }}
-                    position="fixed"
-                    paddingLeft="24" gap="32"
-                    direction="column" hide="s">
-                    <TableOfContents
-                        structure={structure}
-                        about={about} />
-                </Flex>
-            )}
+            {/* { about.tableOfContent.display && (
+                <ScrollProgressIndicator structure={structure} />
+            )} */}
             <Flex
                 fillWidth
                 mobileDirection="column" justifyContent="center">
@@ -220,158 +212,64 @@ export default function About(
                                 marginBottom="m">
                                 {about.work.title}
                             </Heading>
-                            <Flex
-                                direction="column"
-                                fillWidth gap="l" marginBottom="40">
-                                {about.work.experiences.map((experience, index) => (
-                                    <Flex
-                                        key={`${experience.company}-${experience.role}-${index}`}
-                                        fillWidth
-                                        direction="column">
-                                        <Flex
-                                            fillWidth
-                                            justifyContent="space-between"
-                                            alignItems="flex-end"
-                                            marginBottom="4">
-                                            <Text
-                                                id={experience.company}
-                                                variant="heading-strong-l">
-                                                {experience.company}
-                                            </Text>
-                                            <Text
-                                                variant="heading-default-xs"
-                                                onBackground="neutral-weak">
-                                                {experience.timeframe}
-                                            </Text>
-                                        </Flex>
-                                        <Text
-                                            variant="body-default-s"
-                                            onBackground="brand-weak"
-                                            marginBottom="m">
-                                            {experience.role}
-                                        </Text>
-                                        <Flex
-                                            as="ul"
-                                            direction="column" gap="16">
-                                            {experience.achievements.map((achievement: string, index: any) => (
-                                                <Text
-                                                    as="li"
-                                                    variant="body-default-m"
-                                                    key={`${experience.company}-${index}`}>
-                                                    {achievement}
-                                                </Text>
-                                            ))}
-                                        </Flex>
-                                        {experience.images.length > 0 && (
-                                            <Flex
-                                                fillWidth paddingTop="m" paddingLeft="40"
-                                                wrap>
-                                                {experience.images.map((image, index) => (
-                                                    <Flex
-                                                        key={index}
-                                                        border="neutral-medium"
-                                                        borderStyle="solid-1"
-                                                        radius="m"
-                                                        minWidth={image.width} height={image.height}>
-                                                        <SmartImage
-                                                            enlarge
-                                                            radius="m"
-                                                            sizes={image.width.toString()}
-                                                            alt={image.alt}
-                                                            src={image.src}/>
-                                                    </Flex>
-                                                ))}
-                                            </Flex>
-                                        )}
-                                    </Flex>
-                                ))}
-                            </Flex>
+                            <Flex direction="column" gap="l" marginBottom="40">
+  <Heading as="h2" variant="display-strong-xs">Work Experience</Heading>
+  <Text variant="body-default-l"><b>Avesta Technologies (Apr 2025 - Present):</b> Backend AI Software Engineer<br/>- Built RAG-based pipeline for a knowledge chatbot using event-driven architecture<br/>- Implemented AWS Lambda functions for data processing (PostgreSQL, Elasticsearch)<br/>- Serverless backend systems: cost-efficient, scalable, clean code<br/>- TDD, modular development, layered design</Text>
+  <Text variant="body-default-l"><b>Avesta Technologies (Jul 2024 - Apr 2025):</b> Backend Developer Intern<br/>- Developed RESTful APIs (Node.js + Express, OOP, TDD)<br/>- System design for scalable apps<br/>- MySQL, Elasticsearch, AWS, Linux<br/>- Clean architecture, efficient data flow, production-grade code</Text>
+</Flex>
                         </>
                     )}
 
-                    { about.studies.display && (
-                        <>
-                            <Heading
-                                as="h2"
-                                id={about.studies.title}
-                                variant="display-strong-s"
-                                marginBottom="m">
-                                {about.studies.title}
-                            </Heading>
-                            <Flex
-                                direction="column"
-                                fillWidth gap="l" marginBottom="40">
+                    {about.studies.display && (
+                        <Flex direction="column" gap="l" marginBottom="40">
+                            <Heading as="h2" variant="display-strong-s" marginBottom="m">{about.studies.title}</Heading>
+                            <Flex direction="column" fillWidth gap="l">
                                 {about.studies.institutions.map((institution, index) => (
-                                    <Flex
-                                        key={`${institution.name}-${index}`}
-                                        fillWidth gap="4"
-                                        direction="column">
-                                        <Text
-                                            id={institution.name}
-                                            variant="heading-strong-l">
-                                            {institution.name}
-                                        </Text>
-                                        <Text
-                                            variant="heading-default-xs"
-                                            onBackground="neutral-weak">
-                                            {institution.description}
-                                        </Text>
-                                    </Flex>
+                                    <Flex key={`${institution.name}-${index}`} fillWidth direction="column">
+                                        <Text id={institution.name} variant="heading-strong-l" marginBottom="4">{institution.name}</Text>
+                                        <Text variant="body-default-s" onBackground="neutral-weak">{institution.description}</Text>
+</Flex>
                                 ))}
                             </Flex>
-                        </>
+  </Flex>
+)}
+
+{about.challenges.display && (
+  <Flex direction="column" gap="m" marginBottom="40">
+    <Heading as="h2" variant="display-strong-xs">{about.challenges.title}</Heading>
+    {about.challenges.cases.map((c, idx) => (
+      <Text key={idx} variant="body-default-l"><b>{c.title}:</b> {c.description}</Text>
+    ))}
+  </Flex>
+)}
+
+{about.professional.display && (
+  <Flex direction="column" gap="m" marginBottom="40">
+    <Heading as="h2" variant="display-strong-xs">{about.professional.title}</Heading>
+    {about.professional.items.map((item, idx) => (
+      <Text key={idx} variant="body-default-l">- {item}</Text>
+    ))}
+  </Flex>
+)}
+
+                    {/* Certifications & Achievements at the end */}
+                    {about.certifications.display && (
+                        <Flex direction="column" gap="m" marginBottom="40">
+                            <Heading as="h2" variant="display-strong-xs">{about.certifications.title}</Heading>
+                            {about.certifications.items.map((item, idx) => (
+                                <Text key={idx} variant="body-default-l">- {item}</Text>
+                                ))}
+                            </Flex>
                     )}
 
-                    { about.technical.display && (
-                        <>
-                            <Heading
-                                as="h2"
-                                id={about.technical.title}
-                                variant="display-strong-s" marginBottom="40">
-                                {about.technical.title}
-                            </Heading>
-                            <Flex
-                                direction="column"
-                                fillWidth gap="l">
-                                {about.technical.skills.map((skill, index) => (
-                                    <Flex
-                                        key={`${skill}-${index}`}
-                                        fillWidth gap="4"
-                                        direction="column">
-                                        <Text
-                                            variant="heading-strong-l">
-                                            {skill.title}
-                                        </Text>
-                                        <Text
-                                            variant="body-default-m"
-                                            onBackground="neutral-weak">
-                                            {skill.description}
-                                        </Text>
-                                        {skill.images && skill.images.length > 0 && (
-                                            <Flex
-                                                fillWidth paddingTop="m" gap="12"
-                                                wrap>
-                                                {skill.images.map((image, index) => (
-                                                    <Flex
-                                                        key={index}
-                                                        border="neutral-medium"
-                                                        borderStyle="solid-1"
-                                                        radius="m"
-                                                        minWidth={image.width} height={image.height}>
-                                                        <SmartImage
-                                                            enlarge
-                                                            radius="m"
-                                                            sizes={image.width.toString()}
-                                                            alt={image.alt}
-                                                            src={image.src}/>
-                                                    </Flex>
-                                                ))}
-                                            </Flex>
-                                        )}
-                                    </Flex>
+                    {/* Learning & Growth at the end */}
+                    {about.learning.display && (
+                        <Flex direction="column" gap="m" marginBottom="40">
+                            <Heading as="h2" variant="display-strong-xs">{about.learning.title}</Heading>
+                            {about.learning.items.map((item, idx) => (
+                                <Text key={idx} variant="body-default-l">- {item}</Text>
                                 ))}
                             </Flex>
-                        </>
                     )}
                 </Flex>
             </Flex>

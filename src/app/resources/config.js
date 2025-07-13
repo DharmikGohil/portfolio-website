@@ -1,4 +1,4 @@
-const baseURL = 'demo.magic-portfolio.com'
+const baseURL = 'dharmikgohil.vercel.app'
 
 // Enable localization
 const i18n = false;
@@ -14,7 +14,7 @@ const routes = {
     '/about':   true,
     '/work':    true,
     '/blog':    true,
-    '/gallery': true,
+    '/helpful-stuff': true,
 }
 
 // Enable password protection on selected routes
@@ -27,12 +27,12 @@ const effects = {
     mask: 'cursor',             // none | cursor | topLeft | topRight | bottomLeft | bottomRight
     gradient: {
         display: true,
-        opacity: 0.4            // 0 - 1
+        opacity: 0.2            // Reduced from 0.4 for cleaner look
     },
     dots: {
         display: true,
-        opacity: 0.4,           // 0 - 1
-        size: '24'              // 2 | 4 | 8 | 12 | 16 | 20 | 24 | 32 | 40 | 48 | 56 | 634
+        opacity: 0.2,           // Reduced from 0.4 for cleaner look
+        size: '16'              // Reduced from 24 for subtler effect
     },
     lines: {
         display: false,
@@ -42,18 +42,18 @@ const effects = {
 const style = {
     theme:       'dark',         // dark | light
     neutral:     'gray',         // sand | gray | slate
-    brand:       'emerald',      // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+    brand:       'blue',         // Changed from emerald to blue for modern look
     accent:      'indigo',       // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
     solid:       'contrast',     // color | contrast
     solidStyle:  'flat',         // flat | plastic
-    border:      'playful',      // rounded | playful | conservative
+    border:      'rounded',      // Changed from playful to rounded for cleaner look
     surface:     'translucent',  // filled | translucent
-    transition:  'all'           // all | micro | macro
+    transition:  'micro'         // Changed from all to micro for subtler animations
 }
 
 const display = {
-    location: true,
-    time:     true
+    location: false,             // Disabled location display for cleaner header
+    time:     false              // Disabled time display for cleaner header
 }
 
 const mailchimp = {
@@ -62,7 +62,7 @@ const mailchimp = {
         mask: 'topRight',           // none | cursor | topLeft | topRight | bottomLeft | bottomRight
         gradient: {
             display: true,
-            opacity: 0.6            // 0 - 1
+            opacity: 0.4            // 0 - 1
         },
         dots: {
             display: false,

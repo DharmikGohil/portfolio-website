@@ -77,12 +77,12 @@ export default function Home(
 			<Flex
 				fillWidth
 				direction="column"
-				paddingY="l" gap="m">
+				paddingY="xl" gap="l">
 					<Flex
 						direction="column"
 						fillWidth maxWidth="s">
 						<RevealFx
-							translateY="4" fillWidth justifyContent="flex-start" paddingBottom="m">
+							translateY="2" fillWidth justifyContent="flex-start" paddingBottom="m">
 							<Heading
 								wrap="balance"
 								variant="display-strong-l">
@@ -90,7 +90,7 @@ export default function Home(
 							</Heading>
 						</RevealFx>
 						<RevealFx
-							translateY="8" delay={0.2} fillWidth justifyContent="flex-start" paddingBottom="m">
+							translateY="4" delay={0.1} fillWidth justifyContent="flex-start" paddingBottom="l">
 							<Text
 								wrap="balance"
 								onBackground="neutral-weak"
@@ -98,7 +98,7 @@ export default function Home(
 								{home.subline}
 							</Text>
 						</RevealFx>
-						<RevealFx translateY="12" delay={0.4}>
+						<RevealFx translateY="6" delay={0.2}>
 							<Flex fillWidth>
 								<Button
 									id="about"
@@ -124,10 +124,29 @@ export default function Home(
 					</Flex>
 				
 			</Flex>
-			<RevealFx translateY="16" delay={0.6}>
-				<Projects range={[1,1]} locale={locale}/>
+			<RevealFx translateY="8" delay={0.3}>
+				<Projects range={[1, 1]} locale={locale}/>
 			</RevealFx>
-			{routes['/blog'] && (
+
+			{/* Skills & Technologies Showcase */}
+			<RevealFx translateY="10" delay={0.4}>
+				<Flex fillWidth direction="column" gap="m" paddingX="l" marginBottom="40">
+					<Heading as="h2" variant="display-strong-xs" wrap="balance">Skills & Technologies</Heading>
+					<Text variant="body-default-l">Backend: Node.js, Express, AWS Lambda, REST APIs, Event-Driven Architecture, TDD</Text>
+					<Text variant="body-default-l">Databases & Search: PostgreSQL, MySQL, Elasticsearch, Data Processing, Serverless Architecture</Text>
+					<Text variant="body-default-l">Programming Languages: JavaScript/TypeScript, Java, Python, C#, SQL</Text>
+					<Text variant="body-default-l">System Design: Clean Architecture, Modular Design, Scalability, Performance Optimization</Text>
+				</Flex>
+			</RevealFx>
+
+			{/* Technical Blog Posts Section */}
+			<RevealFx translateY="12" delay={0.5}>
+				<Flex fillWidth direction="column" gap="m" paddingX="l" marginBottom="40">
+					<Heading as="h2" variant="display-strong-xs" wrap="balance">Technical Blog Posts</Heading>
+					<Posts range={[1,2]} columns="2" locale={locale}/>
+				</Flex>
+			</RevealFx>
+			{ routes['/blog'] && (
 				<Flex
 					fillWidth gap="24"
 					mobileDirection="column">

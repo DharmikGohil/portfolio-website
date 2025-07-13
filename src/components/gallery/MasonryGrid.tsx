@@ -1,3 +1,4 @@
+// This component is deprecated. The Gallery section is now 'Helpful Stuff' and uses a resource list instead.
 "use client";
 
 import Masonry from 'react-masonry-css';

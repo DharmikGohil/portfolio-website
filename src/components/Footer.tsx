@@ -1,5 +1,5 @@
 import { renderContent } from "@/app/resources";
-import { Flex, IconButton, SmartLink, Text } from "@/once-ui/components"
+import { Flex, IconButton, Text } from "@/once-ui/components"
 import { useTranslations } from "next-intl";
 import styles from './Footer.module.scss'
 
@@ -24,14 +24,7 @@ export const Footer = () => {
                     onBackground="neutral-strong">
                     <Text
                         onBackground="neutral-weak">
-                        © {currentYear} /
-                    </Text>
-                    <Text paddingX="4">
-                        {person.name}
-                    </Text>
-                    <Text onBackground="neutral-weak">
-                        {/* Usage of this template requires attribution. Please don't remove the link to Once UI. */}
-                        / Build With 💔 by Dharmik
+                        © {currentYear} {person.name}
                     </Text>
                 </Text>
                 <Flex

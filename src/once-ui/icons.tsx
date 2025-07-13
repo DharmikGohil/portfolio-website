@@ -36,6 +36,20 @@ import {
 	FaXTwitter
 } from "react-icons/fa6";
 
+import React from 'react';
+
+// LeetCode PNG Icon
+const LeetCodeIcon: IconType = (props) => {
+  return (
+    <img
+      src="https://assets.leetcode.com/static_assets/public/images/LeetCode_logo_rvs.png"
+      alt="LeetCode"
+      style={{ width: '1em', height: '1em', display: 'inline-block', verticalAlign: 'middle' }}
+      {...props as any}
+    />
+  );
+};
+
 export const iconLibrary: Record<string, IconType> = {
 	chevronUp: HiChevronUp,
     chevronDown: HiChevronDown,
@@ -63,5 +77,6 @@ export const iconLibrary: Record<string, IconType> = {
 	github: FaGithub,
 	linkedin: FaLinkedin,
 	x: FaXTwitter,
-	clipboard: HiClipboard
+	clipboard: HiClipboard,
+	leetcode: LeetCodeIcon
 };

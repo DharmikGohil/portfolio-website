@@ -1,0 +1,224 @@
+---
+title: "The Complete Guide to Building the Cognis Chatbot: From Beginner to Advanced"
+date: "2024-06-07"
+description: "A step-by-step, in-depth walkthrough of building the Cognis Chatbot project, covering everything from setup to deployment, with visuals and code examples."
+---
+
+# The Complete Guide to Building the Cognis Chatbot: From Beginner to Advanced
+
+Welcome! In this guide, I’ll walk you through the entire process of building the **Cognis Chatbot**—from the absolute basics to advanced features. Whether you’re a beginner or looking to deepen your skills, this post will help you understand every step, with clear explanations, visuals, and code snippets.
+
+---
+
+## 🧠 What is the Cognis Chatbot?
+
+The Cognis Chatbot is an intelligent assistant designed to help users interact with information in a conversational way. It can answer questions, provide recommendations, and automate tasks—all through a simple chat interface.
+
+**Key Features:**
+- Real-time chat interface
+- Intelligent responses (AI-powered or rule-based)
+- User-friendly UI
+- Scalable backend
+- Visual admin and agent flows
+
+---
+
+## 🏗️ Project Overview
+
+**Tech Stack:**
+- **Frontend:** Next.js, React, SCSS Modules
+- **Backend:** Node.js/Express (or API routes in Next.js)
+- **AI/Logic:** (e.g., OpenAI API, custom logic)
+- **Deployment:** Vercel/Netlify
+
+**Architecture Diagram:**
+
+![Admin Flow](/images/projects/cognis-rag-2-sql/admin-flow.png)
+
+---
+
+## 🚀 Getting Started
+
+### 1. Prerequisites
+- Node.js & npm installed
+- Basic knowledge of React/Next.js
+
+### 2. Setup
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/cognis-chatbot.git
+cd cognis-chatbot
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+### 3. Project Structure
+```
+├── src/
+│   ├── components/         # Reusable UI components
+│   ├── pages/              # Next.js pages (API & UI)
+│   ├── utils/              # Utility functions
+│   └── ...
+├── public/
+│   └── images/             # Diagrams, avatars, etc.
+├── package.json
+└── ...
+```
+
+---
+
+## 💬 Building the Chatbot UI
+
+The chat interface is the heart of the project. Here’s how you can build it:
+
+### 1. Chat Input & Message List
+Create a `Chat` component that manages user input and displays messages.
+
+```jsx
+// src/components/Chat.js
+import React, { useState } from 'react';
+
+export default function Chat() {
+  const [messages, setMessages] = useState([]);
+  const [input, setInput] = useState("");
+
+  const sendMessage = async () => {
+    if (!input.trim()) return;
+    setMessages([...messages, { sender: 'user', text: input }]);
+    setInput("");
+    // Call backend API here
+    const res = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: input })
+    });
+    const data = await res.json();
+    setMessages(msgs => [...msgs, { sender: 'bot', text: data.reply }]);
+  };
+
+  return (
+    <div className="chat-container">
+      <div className="messages">
+        {messages.map((msg, i) => (
+          <div key={i} className={msg.sender}>{msg.text}</div>
+        ))}
+      </div>
+      <input
+        value={input}
+        onChange={e => setInput(e.target.value)}
+        onKeyDown={e => e.key === 'Enter' && sendMessage()}
+        placeholder="Type your message..."
+      />
+      <button onClick={sendMessage}>Send</button>
+    </div>
+  );
+}
+```
+
+### 2. Styling the Chat
+Use SCSS modules for styling:
+```scss
+// src/components/Chat.module.scss
+.chat-container { /* ... */ }
+.user { color: #0070f3; }
+.bot { color: #333; }
+```
+
+---
+
+## 🔗 Backend/API Integration
+
+The backend processes messages and generates responses.
+
+### 1. API Route Example (Next.js)
+```js
+// src/pages/api/chat.js
+export default async function handler(req, res) {
+  const { message } = req.body;
+  // Simple echo logic (replace with AI logic)
+  res.status(200).json({ reply: `You said: ${message}` });
+}
+```
+
+### 2. Connecting to AI (Optional)
+If you want to use OpenAI:
+```js
+// ... inside handler
+const openaiRes = await fetch('https://api.openai.com/v1/chat/completions', {
+  method: 'POST',
+  headers: {
+    'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    model: 'gpt-3.5-turbo',
+    messages: [{ role: 'user', content: message }],
+  }),
+});
+const openaiData = await openaiRes.json();
+res.status(200).json({ reply: openaiData.choices[0].message.content });
+```
+
+---
+
+## 🧩 Advanced Features
+
+### 1. Admin & Agent Flows
+Visualize how admins and agents interact with the system:
+
+![Agent Flow](/images/projects/cognis-rag-2-sql/agent-flow.png)
+
+### 2. Authentication (Optional)
+Add user authentication for personalized experiences.
+
+### 3. Storing Chat History
+Save messages to a database (MongoDB, PostgreSQL, etc.) for analytics or user history.
+
+---
+
+## 🚢 Deployment
+
+### 1. Deploying to Vercel
+- Push your code to GitHub
+- Connect your repo to [Vercel](https://vercel.com/)
+- Set environment variables (e.g., `OPENAI_API_KEY`)
+- Deploy!
+
+### 2. Environment Variables
+Add secrets in your Vercel/Netlify dashboard for API keys.
+
+---
+
+## 🖼️ Visual Examples
+
+- **Admin Flow:** ![Admin Flow](/images/projects/cognis-rag-2-sql/admin-flow.png)
+- **Agent Flow:** ![Agent Flow](/images/projects/cognis-rag-2-sql/agent-flow.png)
+- **UI Screenshot:** *(Add your own screenshot here)*
+
+---
+
+## 📝 Conclusion
+
+Building the Cognis Chatbot taught me a lot about full-stack development, integrating AI, and designing user-friendly interfaces. The project is a great starting point for anyone interested in chatbots, and it’s easy to extend with new features.
+
+**Key Takeaways:**
+- Start simple, then add features
+- Use visuals to clarify architecture
+- Keep code modular and clean
+- Don’t be afraid to experiment!
+
+---
+
+## 🔗 Resources
+- [GitHub Repository](https://github.com/yourusername/cognis-chatbot)
+- [Live Demo](#) *(add your link)*
+- [Vercel](https://vercel.com/)
+- [OpenAI API](https://platform.openai.com/docs/)
+
+---
+
+*Thanks for reading! If you have questions or want to collaborate, feel free to reach out.* 

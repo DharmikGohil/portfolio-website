@@ -1,0 +1,57 @@
+---
+title: "RAG Knowledge Chatbot – Event-Driven Architecture"
+publishedAt: "2024-06-01"
+summary: "A production-ready knowledge chatbot using Retrieval-Augmented Generation (RAG), OpenAI, Gemini, AWS Lambda, and event-driven pipelines."
+images:
+  - "/images/projects/rag-knowledge-chatbot/architecture-diagram.png"
+team:
+  - name: "Dharmik Gohil"
+    role: "Backend + AI Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://linkedin.com/in/dharmikgohil"
+---
+
+## Overview
+
+A real-world project at Avesta Technologies: a knowledge chatbot platform leveraging Retrieval-Augmented Generation (RAG), OpenAI, Gemini AI, AWS Lambda, and event-driven architecture for scalable, cost-efficient document ingestion and semantic search.
+
+## Key Features
+
+- **Event-Driven Pipeline:** Modular, scalable document ingestion and search using NATS as the event broker.
+- **Serverless Processing:** AWS Lambda for cost-efficient, scalable compute.
+- **Semantic Search:** OpenAI & Gemini AI for embedding generation and intelligent query matching.
+- **Vector Database:** Fast, accurate vector similarity search for document retrieval.
+- **Robust Storage:** S3 for file storage, PostgreSQL for metadata.
+- **TDD & Clean Code:** Focused on test-driven development and production-grade reliability.
+
+## Architecture
+
+![RAG Knowledge Chatbot Architecture](/images/projects/rag-knowledge-chatbot/architecture-diagram.png)
+
+*Above: End-to-end flow for document upload, processing, embedding, and search. (See attached diagram)*
+
+### Document Upload Flow
+1. Client uploads document via API Gateway.
+2. File stored in S3, "file_uploaded" event published to NATS.
+3. Preprocessing service fetches file, processes it, and publishes "document_processed".
+4. Embedding service generates embeddings, publishes "embeddings_generated".
+5. Vector DB stores vectors, publishes "vectors_stored".
+
+### Search Flow
+1. Client sends search query.
+2. Query embedding generated (OpenAI/Gemini).
+3. Vector DB performs similarity search.
+4. Results returned to client.
+
+## My Role
+- Architected the event-driven pipeline and designed the system for scalability and cost-efficiency.
+- Implemented AWS Lambda functions for document processing and embedding generation.
+- Integrated OpenAI and Gemini AI for advanced semantic search.
+- Ensured robust error handling, monitoring, and test coverage (TDD).
+
+## Outcome
+- Delivered a production-ready knowledge chatbot capable of ingesting and searching large volumes of documents with low latency and high reliability.
+
+---
+
+*Code and internal details are confidential. Please contact me for more information or a technical deep-dive.* 

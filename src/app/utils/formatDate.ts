@@ -1,5 +1,10 @@
-export function formatDate(date: string, includeRelative = false) {
+export function formatDate(date: string | undefined, includeRelative = false) {
     const currentDate = new Date();
+
+    // Handle undefined, null, or non-string date
+    if (typeof date !== 'string' || !date) {
+        return '';
+    }
 
     if (!date.includes('T')) {
         date = `${date}T00:00:00`;

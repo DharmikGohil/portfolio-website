@@ -29,7 +29,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsTransitioning(true);
-        }, 1000);
+        }, 500);
 
         return () => clearTimeout(timer);
     }, []);
@@ -39,7 +39,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             setIsTransitioning(false);
             const nextIndex = (activeIndex + 1) % images.length;
             handleControlClick(nextIndex);
-
         }
     };
 
@@ -49,7 +48,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             setTimeout(() => {
                 setActiveIndex(index);
                 setIsTransitioning(true);
-            }, 630);
+            }, 300);
         }
     };
 
@@ -57,29 +56,29 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         <Flex
             fillWidth gap="m"
             direction="column">
-            {images[activeIndex] && <Flex onClick={handleImageClick}>
-                <RevealFx
-                    style={{width: '100%'}}
-                    delay={0.4}
-                    trigger={isTransitioning}
-                    speed="fast">
-                    <SmartImage
-                        tabIndex={0}
-                        radius="l"
-                        alt={title}
-                        aspectRatio="16 / 9"
-                        src={images[activeIndex]}
-                        style={{
-                            border: '1px solid var(--neutral-alpha-weak)',
-                            ...(images.length > 1 && {
-                                cursor: 'pointer',
-                            }),
-                        }}/>
-                </RevealFx>
-            </Flex>}
+            {images[activeIndex] && (
+                <SmartLink href={href} style={{ width: '100%' }} unstyled>
+                  <RevealFx
+                      style={{width: '100%'}}
+                      delay={0.2}
+                      trigger={isTransitioning}
+                      speed="fast">
+                      <SmartImage
+                          tabIndex={0}
+                          radius="m"
+                          alt={title}
+                          aspectRatio="16 / 9"
+                          src={images[activeIndex]}
+                          style={{
+                              border: '1px solid var(--neutral-alpha-weak)',
+                              cursor: 'pointer',
+                          }}/>
+                  </RevealFx>
+                </SmartLink>
+            )}
             {images.length > 1 && (
                 <Flex
-                    gap="4" paddingX="s"
+                    gap="3" paddingX="s"
                     fillWidth
                     justifyContent="center">
                     {images.map((_, index) => (
@@ -91,7 +90,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                                     ? 'var(--neutral-on-background-strong)' 
                                     : 'var(--neutral-alpha-medium)',
                                 cursor: 'pointer',
-                                transition: 'background 0.3s ease',
+                                transition: 'background 0.2s ease',
                             }}
                             fillWidth
                             height="2">
@@ -101,7 +100,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             )}
             <Flex
                 mobileDirection="column"
-                fillWidth paddingX="s" paddingTop="12" paddingBottom="24" gap="l">
+                fillWidth paddingX="s" paddingTop="12" paddingBottom="20" gap="l">
                 {title && (
                     <Flex
                         flex={5}>
@@ -116,7 +115,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                 {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
                     <Flex
                         flex={7} direction="column"
-                        gap="16">
+                        gap="12">
                         {avatars?.length > 0 && (
                             <AvatarGroup
                                 avatars={avatars}
