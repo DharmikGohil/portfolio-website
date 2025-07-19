@@ -31,13 +31,22 @@ export default async function handler(
         }
 
         // Send email using Resend
-        const resend = new Resend(process.env.RESEND_API_KEY);
+        console.log('Environment check:', {
+            hasApiKey: !!process.env.RESEND_API_KEY,
+            apiKeyLength: process.env.RESEND_API_KEY?.length,
+            fromEmail: process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev',
+            toEmail: process.env.RESEND_TO_EMAIL || 'gohildharmik2020@gmail.com'
+        });
+        
         if (!process.env.RESEND_API_KEY) {
             console.error('RESEND_API_KEY is not configured');
             return res.status(500).json({ message: 'Email service not configured' });
         }
         
+        const resend = new Resend(process.env.RESEND_API_KEY);
+        
         try {
+            console.log('Attempting to send email...');
             await resend.emails.send({
                 from: process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev',
                 to: process.env.RESEND_TO_EMAIL || 'gohildharmik2020@gmail.com',
@@ -87,12 +96,24 @@ export default async function handler(
             console.log('Email sent successfully via Resend');
         } catch (emailError) {
             console.error('Failed to send email via Resend:', emailError);
-            return res.status(500).json({ message: 'Failed to send email' });
+            console.error('Error details:', {
+                message: emailError.message,
+                code: emailError.code,
+                statusCode: emailError.statusCode
+            });
+            return res.status(500).json({ 
+                message: 'Failed to send email',
+                error: emailError.message 
+            });
         }
 
         res.status(200).json({ message: 'Message sent successfully' });
     } catch (error) {
         console.error('Contact form error:', error);
-        res.status(500).json({ message: 'Internal server error' });
+        console.error('Full error object:', JSON.stringify(error, null, 2));
+        res.status(500).json({ 
+            message: 'Internal server error',
+            error: error instanceof Error ? error.message : 'Unknown error'
+        });
     }
 } 
