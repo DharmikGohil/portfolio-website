@@ -29,14 +29,6 @@ export default async function handler(
         if (!emailRegex.test(email)) {
             return res.status(400).json({ message: 'Invalid email format' });
         }
-
-        // Send email using Resend
-        console.log('Environment check:', {
-            hasApiKey: !!process.env.RESEND_API_KEY,
-            apiKeyLength: process.env.RESEND_API_KEY?.length,
-            fromEmail: process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev',
-            toEmail: process.env.RESEND_TO_EMAIL || 'gohildharmik2020@gmail.com'
-        });
         
         if (!process.env.RESEND_API_KEY) {
             console.error('RESEND_API_KEY is not configured');
