@@ -2,10 +2,10 @@
     "person": {
         "role": "Backend + Data + AI Engineer"
     },
-    "newsletter": {
-        "title": "Subscribe to {firstName}'s Newsletter",
-        "description": "I occasionally write about backend engineering, system design, and share insights on building scalable architectures and AI systems",
-        "button": "Sign up"
+    "contact": {
+        "title": "Get in touch with me",
+        "description": "Have a project in mind, want to collaborate, or just want to say hello? I'd love to hear from you! Fill out the form below and I'll get back to you as soon as possible.",
+        "button": "Send Message"
     },
     "home": {
         "label": "Home",

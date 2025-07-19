@@ -12,10 +12,10 @@ const person = {
     languages: ['English', 'Hindi', 'Gujarati']
 }
 
-const newsletter = {
+const contact = {
     display: true,
-    title: <>Subscribe to {person.firstName}'s Newsletter</>,
-    description: <>I occasionally write about backend engineering, system design, and share insights on building scalable architectures and AI systems.</>
+    title: <>Get in touch with me</>,
+    description: <>Have a project in mind, want to collaborate, or just want to say hello? I'd love to hear from you! Fill out the form below and I'll get back to you as soon as possible.</>
 }
 
 const social = [
@@ -271,4 +271,4 @@ const helpfulStuff = {
     ]
 }
 
-export { person, newsletter, social, home, about, blog, work, helpfulStuff };
+export { person, contact, social, home, about, blog, work, helpfulStuff };

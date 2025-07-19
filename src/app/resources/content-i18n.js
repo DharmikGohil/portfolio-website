@@ -13,10 +13,10 @@ const createI18nContent = (t) => {
         languages: ['English', 'Bahasa']  // optional: Leave the array empty if you don't want to display languages
     }
 
-    const newsletter = {
+    const contact = {
         display: true,
-        title: <>{t("newsletter.title", {firstName: person.firstName})}</>,
-        description: <>{t("newsletter.description")}</>
+        title: <>{t("contact.title")}</>,
+        description: <>{t("contact.description")}</>
     }
 
     const social = [
@@ -245,16 +245,16 @@ const createI18nContent = (t) => {
             },
         ]
     }
-    return {
-        person,
-        social,
-        newsletter,
-        home,
-        about,
-        blog,
-        work,
-        helpfulStuff
-    }
+            return {
+            person,
+            social,
+            contact,
+            home,
+            about,
+            blog,
+            work,
+            helpfulStuff
+        }
 };
 
 export { createI18nContent };

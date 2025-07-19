@@ -56,21 +56,6 @@ const display = {
     time:     false              // Disabled time display for cleaner header
 }
 
-const mailchimp = {
-    action: 'https://url/subscribe/post?parameters',
-    effects: {
-        mask: 'topRight',           // none | cursor | topLeft | topRight | bottomLeft | bottomRight
-        gradient: {
-            display: true,
-            opacity: 0.4            // 0 - 1
-        },
-        dots: {
-            display: false,
-        },
-        lines: {
-            display: false,
-        },
-    }
-}
 
-export { routes, protectedRoutes, effects, style, display, mailchimp, baseURL, i18n, i18nOptions };
+
+export { routes, protectedRoutes, effects, style, display, baseURL, i18n, i18nOptions };

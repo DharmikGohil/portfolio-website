@@ -2,10 +2,10 @@
     "person": {
         "role": "Insinyur Desain"
     },
-    "newsletter": {
-        "title": "Langganan Buletin {firstName}",
-        "description": "Saya sesekali menulis tentang desain, teknologi, dan berbagi pemikiran tentang persimpangan kreativitas dan rekayasa",
-        "button": "Daftar"
+    "contact": {
+        "title": "Hubungi Saya",
+        "description": "Ada proyek dalam pikiran, ingin berkolaborasi, atau hanya ingin menyapa? Saya akan senang mendengar dari Anda! Isi formulir di bawah dan saya akan segera menghubungi Anda.",
+        "button": "Kirim Pesan"
     },
     "home": {
         "label": "Beranda",

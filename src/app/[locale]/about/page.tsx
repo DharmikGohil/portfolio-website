@@ -213,7 +213,7 @@ export default function About(
                                 {about.work.title}
                             </Heading>
                             <Flex direction="column" gap="l" marginBottom="40">
-  <Heading as="h2" variant="display-strong-xs">Work Experience</Heading>
+  {/* <Heading as="h2" variant="display-strong-xs">Work Experience</Heading> */}
   <Text variant="body-default-l"><b>Avesta Technologies (Apr 2025 - Present):</b> Backend AI Software Engineer<br/>- Built RAG-based pipeline for a knowledge chatbot using event-driven architecture<br/>- Implemented AWS Lambda functions for data processing (PostgreSQL, Elasticsearch)<br/>- Serverless backend systems: cost-efficient, scalable, clean code<br/>- TDD, modular development, layered design</Text>
   <Text variant="body-default-l"><b>Avesta Technologies (Jul 2024 - Apr 2025):</b> Backend Developer Intern<br/>- Developed RESTful APIs (Node.js + Express, OOP, TDD)<br/>- System design for scalable apps<br/>- MySQL, Elasticsearch, AWS, Linux<br/>- Clean architecture, efficient data flow, production-grade code</Text>
 </Flex>
