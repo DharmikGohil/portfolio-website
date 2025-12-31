@@ -1,0 +1,33 @@
+---
+title: "Sentient-SDK: Open Source RAG Evaluation Framework"
+publishedAt: "2024-12-01"
+summary: "An open-source RAG evaluation framework to automate quality assurance for LLM applications, featuring shadow testing, LLM-as-a-Judge, and deterministic guardrails."
+images: []
+team:
+  - name: "Dharmik Gohil"
+    role: "Creator & Lead Maintainer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://linkedin.com/in/dharmikgohil"
+---
+
+## Overview
+
+Sentient-SDK is an open-source RAG evaluation framework designed to automate quality assurance for LLM applications. It addresses the critical need for reliable testing in AI-driven systems by providing tools for shadow testing, modular scoring, and safety guardrails.
+
+## Key Features
+
+- **Shadow Testing Engine**: Designed using TypeScript and Async Iterators to sample live production traffic at a configurable rate without impacting user latency.
+- **LLM-as-a-Judge**: Implemented patterns to decouple evaluation logic from providers (OpenAI, Claude), enabling modular scoring of faithfulness and hallucination.
+- **Deterministic Guardrails**: Built a system using Regex and NLP heuristics to catch PII leaks and forbidden terms.
+- **Automated QA**: Automates the quality assurance process for LLM applications, ensuring reliability and performance.
+
+## Tech Stack
+
+- **Languages**: TypeScript, Node.js
+- **AI/ML**: OpenAI API
+- **Testing**: Jest (TDD)
+- **CI/CD**: GitHub Actions, NPM Publishing
+
+## Outcome
+
+Successfully architected and published the `sentient-sdk` npm package, enabling developers to integrate robust evaluation pipelines into their LLM applications. The framework supports modular scoring and shadow testing, making it a versatile tool for maintaining high-quality AI systems.

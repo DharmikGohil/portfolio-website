@@ -10,10 +10,10 @@ const i18nOptions = {
 }
 
 const routes = {
-    '/':        true,
-    '/about':   true,
-    '/work':    true,
-    '/blog':    true,
+    '/': true,
+    '/about': true,
+    '/work': true,
+    '/blog': true,
     '/helpful-stuff': true,
 }
 
@@ -27,12 +27,12 @@ const effects = {
     mask: 'cursor',             // none | cursor | topLeft | topRight | bottomLeft | bottomRight
     gradient: {
         display: true,
-        opacity: 0.2            // Reduced from 0.4 for cleaner look
+        opacity: 0.4            // Increased opacity for vibrancy
     },
     dots: {
         display: true,
-        opacity: 0.2,           // Reduced from 0.4 for cleaner look
-        size: '16'              // Reduced from 24 for subtler effect
+        opacity: 0.4,           // Increased opacity for better texture
+        size: '24'              // Larger dots
     },
     lines: {
         display: false,
@@ -40,20 +40,20 @@ const effects = {
 }
 
 const style = {
-    theme:       'dark',         // dark | light
-    neutral:     'gray',         // sand | gray | slate
-    brand:       'blue',         // Changed from emerald to blue for modern look
-    accent:      'indigo',       // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-    solid:       'contrast',     // color | contrast
-    solidStyle:  'flat',         // flat | plastic
-    border:      'rounded',      // Changed from playful to rounded for cleaner look
-    surface:     'translucent',  // filled | translucent
-    transition:  'micro'         // Changed from all to micro for subtler animations
+    theme: 'dark',         // dark | light
+    neutral: 'gray',         // sand | gray | slate
+    brand: 'violet',       // Premium violet
+    accent: 'cyan',         // High contrast cyan
+    solid: 'contrast',     // color | contrast
+    solidStyle: 'plastic',      // plastic for depth
+    border: 'rounded',      // rounded for modern feel
+    surface: 'translucent',  // filled | translucent
+    transition: 'all'           // all for smoother interactions
 }
 
 const display = {
     location: false,             // Disabled location display for cleaner header
-    time:     false              // Disabled time display for cleaner header
+    time: false              // Disabled time display for cleaner header
 }
 
 

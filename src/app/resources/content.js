@@ -2,13 +2,13 @@ import { InlineCode } from "@/once-ui/components";
 
 const person = {
     firstName: 'Dharmik',
-    lastName:  'Gohil',
+    lastName: 'Gohil',
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
-    role:      'Backend + Data + AI Engineer',
-    avatar:    '/images/avatar.jpg',
-    location:  'Ahmedabad, Gujarat, India',
+    role: 'Software Engineer - Backend & AI Infrastructure',
+    avatar: '/images/avatar.jpg',
+    location: 'Ahmedabad, Gujarat, India',
     languages: ['English', 'Hindi', 'Gujarati']
 }
 
@@ -37,7 +37,7 @@ const social = [
     {
         name: 'Email',
         icon: 'email',
-        link: 'mailto:gohildharmik2020@gmail.com',
+        link: 'mailto:dharmikgohil.dev@gmail.com',
     },
     {
         name: 'Twitter',
@@ -49,9 +49,9 @@ const social = [
 const home = {
     label: 'Home',
     title: `${person.name}'s Portfolio`,
-    description: `Backend + Data + AI Engineer specializing in system design, RAG chatbots, and scalable architectures`,
-    headline: <>Backend + Data + AI Engineer</>,
-    subline: <>I'm Dharmik, currently working at <InlineCode>Avesta Technologies</InlineCode> where I design RAG-based chatbots and serverless data processing pipelines. I'm passionate about clean architecture, TDD, and building systems that are reliable, performant, and easy to maintain.</>
+    description: `Software Engineer specializing in backend development and AI infrastructure`,
+    headline: <>Software Engineer - Backend & AI Infrastructure</>,
+    subline: <>I'm Dharmik, a Software Engineer at <InlineCode>AvestaLabs</InlineCode> specializing in building scalable systems and AI infrastructure. I'm passionate about Clean Architecture, OOP, and TDD, currently building IngestIQ.ai.</>
 }
 
 const about = {
@@ -72,33 +72,45 @@ const about = {
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>I'm a Backend + Data + AI Engineer passionate about system design and building scalable, event-driven architectures. I currently work at Avesta Technologies where I design RAG-based chatbots and serverless data processing pipelines using AWS Lambda, PostgreSQL, and Elasticsearch. I strongly believe in writing clean code, practicing TDD, and building systems that are reliable, performant, and easy to maintain.</>
+        description: <>I'm a Software Engineer specializing in backend development and AI infrastructure with hands-on experience in building scalable systems using TypeScript, AWS, PostgreSQL, and vector databases. Currently, I'm architecting IngestIQ.ai, a RAG platform transforming unstructured data into AI-ready context. I am passionate about Clean Architecture, OOP, and TDD.</>
     },
     work: {
         display: true,
         title: 'Work Experience',
         experiences: [
             {
-                company: 'Avesta Technologies',
-                timeframe: 'Apr 2025 - Present',
-                role: 'Backend AI Software Engineer',
+                company: 'Avesta (Avesta HQ → AvestaLabs)',
+                timeframe: 'Jul 2025 – Present',
+                role: 'Software Engineer — Product & AI Engineering',
                 achievements: [
-                    <>Currently building an RAG-based pipeline for a knowledge-based chatbot using event-driven architecture</>,
-                    <>Implemented AWS Lambda functions to process/manage data from PostgreSQL and Elasticsearch</>,
-                    <>Built serverless backend systems with a focus on cost-efficiency, scalability, and clean code</>,
-                    <>Practiced TDD, modular development, and layered design principles</>
+                    <>Architecting IngestIQ.ai, a production-grade RAG platform for ingesting, chunking, embedding, and semantic retrieval.</>,
+                    <>Built event-driven ingestion pipelines and vector DB indexing workflows.</>,
+                    <>Integrated Model Context Protocol (MCP) for structured agent context.</>,
+                    <>Implemented questions embeddings and LLM-based semantic chunking to improve retrieval accuracy and contextual relevance across the RAG pipeline.</>
                 ],
                 images: []
             },
             {
-                company: 'Avesta Technologies',
-                timeframe: 'Jul 2024 - Apr 2025',
-                role: 'Backend Developer Intern',
+                company: 'Avesta (Avesta HQ)',
+                timeframe: 'Apr 2025 – Jul 2025',
+                role: 'Backend Software Engineer',
                 achievements: [
-                    <>Developed RESTful APIs using Node.js + Express with focus on OOP and TDD</>,
-                    <>Applied system design principles for scalable applications</>,
-                    <>Hands-on experience with MySQL, Elasticsearch, AWS services, and Linux</>,
-                    <>Focused on clean architecture, efficient data flow, and production-grade code</>
+                    <>Built serverless backend pipelines to process and migrate CSV and structured data to MySQL using AWS Lambda and Step Functions.</>,
+                    <>Designed database schema and implemented layered architecture with unit, integration, and E2E tests.</>,
+                    <>Developed ETL workflows integrating MySQL and Elasticsearch for ingestion, transformation, and search indexing.</>,
+                    <>Ensured production readiness, scalability, and observability through proper error handling, retry logic, logging, and TDD.</>
+                ],
+                images: []
+            },
+            {
+                company: 'Avesta (Avesta HQ)',
+                timeframe: 'Jul 2024 – Apr 2025',
+                role: 'Software Engineer Intern',
+                achievements: [
+                    <>Developed REST APIs using Node.js and Express.js following OOP and clean code practices.</>,
+                    <>Worked with AWS, Elasticsearch, and MySQL for backend systems.</>,
+                    <>Implemented unit, integration, and E2E tests for production readiness.</>,
+                    <>Implemented code with TDD.</>
                 ],
                 images: []
             }
@@ -110,11 +122,7 @@ const about = {
         institutions: [
             {
                 name: 'Vishwakarma Government Engineering College',
-                description: <>Bachelor of Engineering in Computer Engineering (CGPA: 8.37/10)</>,
-            },
-            {
-                name: 'Shree Swaminarayan Gurukul, Taravada',
-                description: <>12th Science (GSHEB) - 82.16% | 10th Standard (GSEB) - 94.17% | JEE Mains Score: 90.14%</>,
+                description: <>B.E. in Computer Engineering — CGPA: 8.37/10</>,
             }
         ]
     },
@@ -123,28 +131,44 @@ const about = {
         title: 'Technical Skills',
         skills: [
             {
-                title: 'Backend Development',
-                description: <>Node.js, Express.js, AWS Lambda, REST APIs, Event-Driven Architecture, Clean Code Principles, TDD</>,
+                title: 'Languages',
+                description: <>TypeScript, JavaScript, Java, SQL, Python</>,
                 images: []
             },
             {
-                title: 'Databases & Search',
-                description: <>PostgreSQL, MySQL, Elasticsearch, Data Processing, Serverless Architecture</>,
+                title: 'Frameworks',
+                description: <>Node.js, Express.js, Next.js, React</>,
                 images: []
             },
             {
-                title: 'Programming Languages',
-                description: <>JavaScript/TypeScript, Java, Python, C#, SQL with focus on OOP and system design</>,
+                title: 'Databases',
+                description: <>PostgreSQL, MySQL, Elasticsearch, Vector DBs</>,
+                images: []
+            },
+            {
+                title: 'Cloud & Infra',
+                description: <>AWS, Docker, Linux</>,
+                images: []
+            },
+            {
+                title: 'AI & RAG',
+                description: <>Retrieval-Augmented Generation (RAG), MCP, Semantic Search, Embeddings, LangChain</>,
+                images: []
+            },
+            {
+                title: 'Practices',
+                description: <>Clean Architecture, OOP, TDD, Event-Driven Programming, System Design</>,
                 images: []
             }
         ]
     },
     certifications: {
         display: true,
-        title: 'Certifications & Achievements',
+        title: 'Achievements',
         items: [
-            'Won an AI Hackathon at Avesta Technologies',
-            'Solved 300+ problems on LeetCode'
+            '2nd Prize Winner at Avesta AI Hackathon — “Kudos Wall”',
+            'Solved 300+ LeetCode problems (Max Rating: 1470)',
+            'Recognized as a top performer in Avesta internship'
         ]
     },
     challenges: {
@@ -173,9 +197,9 @@ const about = {
         display: true,
         title: 'Professional Development',
         items: [
-            'Developed a RAG-based chatbot for a knowledge-based application',
-            'Developed a serverless data processing pipeline for a knowledge-based application',
-            'Write clean and maintainable code with Tests'
+            'Architecting production-grade RAG platforms',
+            'Building serverless backend systems',
+            'Writing clean and maintainable code with TDD'
         ]
     }
 }
@@ -196,75 +220,74 @@ const helpfulStuff = {
     label: 'Helpful Stuff',
     title: 'Helpful Stuff',
     description: `A collection of bookmarks, helpful videos, docs, crash courses, and more by ${person.name}`,
-    // Optionally, keep images or replace with resources array later
     images: [
-        { 
-            src: '/images/gallery/img-01.jpg', 
+        {
+            src: '/images/gallery/img-01.jpg',
             alt: 'image',
             orientation: 'vertical'
         },
-        { 
-            src: '/images/gallery/img-02.jpg', 
+        {
+            src: '/images/gallery/img-02.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-03.jpg', 
+        {
+            src: '/images/gallery/img-03.jpg',
             alt: 'image',
             orientation: 'vertical'
         },
-        { 
-            src: '/images/gallery/img-04.jpg', 
+        {
+            src: '/images/gallery/img-04.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-05.jpg', 
+        {
+            src: '/images/gallery/img-05.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-06.jpg', 
+        {
+            src: '/images/gallery/img-06.jpg',
             alt: 'image',
             orientation: 'vertical'
         },
-        { 
-            src: '/images/gallery/img-07.jpg', 
+        {
+            src: '/images/gallery/img-07.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-08.jpg', 
+        {
+            src: '/images/gallery/img-08.jpg',
             alt: 'image',
             orientation: 'vertical'
         },
-        { 
-            src: '/images/gallery/img-09.jpg', 
+        {
+            src: '/images/gallery/img-09.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-10.jpg', 
+        {
+            src: '/images/gallery/img-10.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-11.jpg', 
+        {
+            src: '/images/gallery/img-11.jpg',
             alt: 'image',
             orientation: 'vertical'
         },
-        { 
-            src: '/images/gallery/img-12.jpg', 
+        {
+            src: '/images/gallery/img-12.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-13.jpg', 
+        {
+            src: '/images/gallery/img-13.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-14.jpg', 
+        {
+            src: '/images/gallery/img-14.jpg',
             alt: 'image',
             orientation: 'vertical'
         }
