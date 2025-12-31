@@ -10,33 +10,33 @@ import { formatDate } from '@/app/utils/formatDate';
 import ScrollToHash from '@/components/ScrollToHash';
 
 interface WorkParams {
-    params: {
-        slug: string;
+	params: {
+		slug: string;
 		locale: string;
-    };
+	};
 }
 
 export async function generateStaticParams(): Promise<{ slug: string; locale: string }[]> {
 	const locales = routing.locales;
-    
-    // Create an array to store all posts from all locales
-    const allPosts: { slug: string; locale: string }[] = [];
 
-    // Fetch posts for each locale
-    for (const locale of locales) {
-        const posts = getPosts(['src', 'app', '[locale]', 'work', 'projects', locale]);
-        allPosts.push(...posts.map(post => ({
-            slug: post.slug,
-            locale: locale,
-        })));
-    }
+	// Create an array to store all posts from all locales
+	const allPosts: { slug: string; locale: string }[] = [];
 
-    return allPosts;
+	// Fetch posts for each locale
+	for (const locale of locales) {
+		const posts = getPosts(['src', 'app', '[locale]', 'work', 'projects', locale]);
+		allPosts.push(...posts.map(post => ({
+			slug: post.slug,
+			locale: locale,
+		})));
+	}
+
+	return allPosts;
 }
 
 export function generateMetadata({ params: { slug, locale } }: WorkParams) {
 	let post = getPosts(['src', 'app', '[locale]', 'work', 'projects', locale]).find((post) => post.slug === slug)
-	
+
 	if (!post) {
 		return
 	}
@@ -56,6 +56,9 @@ export function generateMetadata({ params: { slug, locale } }: WorkParams) {
 	return {
 		title,
 		description,
+		alternates: {
+			canonical: `https://${baseURL}/work/${post.slug}`,
+		},
 		images,
 		team,
 		openGraph: {
@@ -91,8 +94,8 @@ export default function Project({ params }: WorkParams) {
 	const { person } = renderContent(t);
 
 	const avatars = post.metadata.team?.map((person) => ({
-        src: person.avatar,
-    })) || [];
+		src: person.avatar,
+	})) || [];
 
 	return (
 		<Flex as="section"
@@ -113,7 +116,7 @@ export default function Project({ params }: WorkParams) {
 						image: post.metadata.image
 							? `https://${baseURL}${post.metadata.image}`
 							: `https://${baseURL}/og?title=${post.metadata.title}`,
-							url: `https://${baseURL}/${params.locale}/work/${post.slug}`,
+						url: `https://${baseURL}/${params.locale}/work/${post.slug}`,
 						author: {
 							'@type': 'Person',
 							name: person.name,
@@ -132,6 +135,7 @@ export default function Project({ params }: WorkParams) {
 					Projects
 				</Button>
 				<Heading
+					as="h1"
 					variant="display-strong-s">
 					{post.metadata.title}
 				</Heading>
@@ -141,20 +145,20 @@ export default function Project({ params }: WorkParams) {
 					aspectRatio="16 / 9"
 					radius="m"
 					alt="image"
-					src={post.metadata.images[0]}/>
+					src={post.metadata.images[0]} />
 			)}
-			<Flex style={{margin: 'auto'}}
+			<Flex style={{ margin: 'auto' }}
 				as="article"
 				maxWidth="xs" fillWidth
 				direction="column">
 				<Flex
 					gap="12" marginBottom="24"
 					alignItems="center">
-					{ post.metadata.team && (
+					{post.metadata.team && (
 						<AvatarGroup
 							reverseOrder
 							avatars={avatars}
-							size="m"/>
+							size="m" />
 					)}
 					<Text
 						variant="body-default-s"

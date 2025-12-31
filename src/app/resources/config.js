@@ -1,4 +1,4 @@
-const baseURL = 'dharmikgohil.vercel.app'
+const baseURL = 'dharmikgohil.in'
 
 // Enable localization
 const i18n = false;

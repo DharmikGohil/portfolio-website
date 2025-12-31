@@ -48,8 +48,8 @@ const social = [
 
 const home = {
     label: 'Home',
-    title: `${person.name}'s Portfolio`,
-    description: `Software Engineer specializing in backend development and AI infrastructure`,
+    title: `${person.name} | Backend & AI Infrastructure Engineer`,
+    description: `Dharmik Gohil is a Software Engineer specializing in backend development, AI infrastructure, RAG systems, and scalable architectures. Building IngestIQ.ai and enterprise solutions.`,
     headline: <>Software Engineer - Backend & AI Infrastructure</>,
     subline: <>I'm Dharmik, a Software Engineer at <InlineCode>AvestaLabs</InlineCode> specializing in building scalable systems and AI infrastructure. I'm passionate about Clean Architecture, OOP, and TDD, currently building IngestIQ.ai.</>
 }
@@ -206,14 +206,14 @@ const about = {
 
 const blog = {
     label: 'Blog',
-    title: 'Writing about backend engineering and system design...',
-    description: `Read what ${person.name} has been up to recently`
+    title: 'Blog | Backend Engineering & System Design Insights',
+    description: `Technical articles by ${person.name} on backend development, system design, RAG pipelines, and building scalable AI infrastructure.`
 }
 
 const work = {
     label: 'Work',
-    title: 'My projects',
-    description: `Backend and AI projects by ${person.name}`
+    title: 'Projects | Backend & AI Engineering Portfolio',
+    description: `Explore ${person.name}'s portfolio of backend engineering and AI projects including IngestIQ, RAG systems, and enterprise solutions.`
 }
 
 const helpfulStuff = {
