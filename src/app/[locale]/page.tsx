@@ -6,6 +6,8 @@ import { Projects } from '@/components/work/Projects';
 import { baseURL, routes, renderContent } from '@/app/resources';
 import { ContactForm } from '@/components';
 import { Posts } from '@/components/blog/Posts';
+import { Marquee, GithubHeatmap } from '@/components';
+import { skills } from '@/app/resources/skills';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 
@@ -150,16 +152,63 @@ export default function Home(
 
 			{/* Skills & Technologies Grid */}
 			<RevealFx translateY={12} delay={0.5}>
-				<Flex fillWidth direction="column" gap="m" paddingX="l" marginBottom="40">
-					<Heading as="h2" variant="display-strong-xs" wrap="balance">Skills & Technologies</Heading>
-					<Text variant="body-default-l"><strong>Backend Development:</strong> Node.js, Express.js, AWS Lambda, REST APIs, Event-Driven Architecture, Serverless, Microservices</Text>
-					<Text variant="body-default-l"><strong>Databases & Search:</strong> PostgreSQL, MySQL, Elasticsearch, Redis, Vector Databases (Pinecone, Weaviate)</Text>
-					<Text variant="body-default-l"><strong>AI & RAG Infrastructure:</strong> Retrieval-Augmented Generation, Semantic Search, Embeddings, LangChain, Model Context Protocol (MCP)</Text>
-					<Text variant="body-default-l"><strong>Programming Languages:</strong> TypeScript, JavaScript, Java, Python, SQL, C#</Text>
-					<Text variant="body-default-l"><strong>Cloud & DevOps:</strong> AWS (Lambda, Step Functions, S3, SQS), Docker, Linux, CI/CD Pipelines</Text>
-					<Text variant="body-default-l"><strong>Practices:</strong> Clean Architecture, Domain-Driven Design, Test-Driven Development, System Design, Performance Optimization</Text>
+				<Flex fillWidth direction="column" gap="l" marginBottom="40">
+					<Heading as="h2" variant="display-strong-xs" wrap="balance" paddingX="l">Skills & Technologies</Heading>
+
+					<Flex fillWidth direction="column" gap="l">
+						{skills.map((category, index) => (
+							<Flex key={category.category} fillWidth direction="column" gap="16">
+								<Heading
+									as="h3"
+									variant="body-default-s"
+									onBackground="neutral-weak"
+									paddingX="l"
+									style={{ textTransform: 'uppercase', letterSpacing: '0.05em' }}
+								>
+									{category.category}
+								</Heading>
+								<Marquee
+									direction={index % 2 === 0 ? 'left' : 'right'}
+									speed={index % 2 === 0 ? 30 : 40}
+								>
+									{category.items.map((skill) => (
+										<Flex
+											key={skill.name}
+											alignItems="center"
+											gap="12"
+											paddingX="16"
+											paddingY="12"
+											style={{
+												border: '1px solid var(--neutral-alpha-medium)',
+												borderRadius: 'var(--radius-l)',
+												background: 'linear-gradient(135deg, var(--neutral-alpha-weak) 0%, var(--neutral-alpha-medium) 100%)',
+												backdropFilter: 'blur(10px)',
+												transition: 'all 0.3s ease',
+												cursor: 'default'
+											}}
+										>
+											{typeof skill.icon === 'string' ? (
+												<img
+													src={skill.icon}
+													alt={skill.name}
+													width={24}
+													height={24}
+													style={{ objectFit: 'contain' }}
+												/>
+											) : (
+												<skill.icon size={24} />
+											)}
+											<Text variant="body-default-m" style={{ whiteSpace: 'nowrap' }}>{skill.name}</Text>
+										</Flex>
+									))}
+								</Marquee>
+							</Flex>
+						))}
+					</Flex>
 				</Flex>
 			</RevealFx>
+
+			<GithubHeatmap username="dharmik-at" />
 
 			{/* Technical Blog Posts Section */}
 			{/* <RevealFx translateY={12} delay={0.5}>
