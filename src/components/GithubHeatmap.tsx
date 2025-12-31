@@ -25,6 +25,7 @@ const GithubHeatmap: React.FC<GithubHeatmapProps> = ({ username: initialUsername
             gap="m"
             className="w-full"
             marginBottom="40"
+            style={{ minWidth: 0, maxWidth: '100vw' }}
         >
             <Flex
                 direction="column"
@@ -62,14 +63,15 @@ const GithubHeatmap: React.FC<GithubHeatmapProps> = ({ username: initialUsername
                 </Flex>
             </Flex>
 
-            <Flex
+            <div
                 className="w-full"
                 style={{
                     overflowX: 'auto',
                     padding: 'var(--static-space-16)',
                     maxWidth: '100%',
                     scrollbarWidth: 'none', // Hide scrollbar for cleaner look
-                    msOverflowStyle: 'none'
+                    msOverflowStyle: 'none',
+                    maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)'
                 }}
             >
                 <style jsx global>{`
@@ -90,7 +92,7 @@ const GithubHeatmap: React.FC<GithubHeatmapProps> = ({ username: initialUsername
                         zIndex: 100
                     }}
                 />
-                <div style={{ minWidth: 'fit-content', marginLeft: 'auto', marginRight: 'auto' }}>
+                <div style={{ minWidth: '100%', width: 'fit-content', display: 'flex', justifyContent: 'center' }}>
                     <GitHubCalendar
                         username={username}
                         colorScheme="dark"
@@ -117,7 +119,7 @@ const GithubHeatmap: React.FC<GithubHeatmapProps> = ({ username: initialUsername
                         )}
                     />
                 </div>
-            </Flex>
+            </div>
 
             <Button
                 href={`https://github.com/${username}`}
