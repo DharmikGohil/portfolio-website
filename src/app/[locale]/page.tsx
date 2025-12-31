@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Heading, Flex, Text, Button, Avatar, RevealFx, Arrow } from '@/once-ui/components';
-import { Projects } from '@/components/work/Projects';
+
 
 import { baseURL, routes, renderContent } from '@/app/resources';
 import { ContactForm } from '@/components';
@@ -130,25 +130,10 @@ export default function Home(
 				</Flex>
 
 			</Flex>
-			<RevealFx translateY={8} delay={0.3}>
-				<Projects range={[1, 1]} locale={locale} />
-			</RevealFx>
+
 
 			{/* Skills & Technologies Showcase */}
-			<RevealFx translateY={10} delay={0.4}>
-				<Flex fillWidth direction="column" gap="m" paddingX="l" marginBottom="40">
-					<Heading as="h2" variant="display-strong-xs" wrap="balance">About Me</Heading>
-					<Text variant="body-default-l">
-						I'm a Software Engineer specializing in backend development and AI infrastructure at AvestaLabs in Ahmedabad, India. With expertise in building production-grade systems, I focus on creating scalable, maintainable, and efficient solutions using modern technologies and best practices.
-					</Text>
-					<Text variant="body-default-l">
-						Currently, I'm architecting IngestIQ.ai, an enterprise RAG (Retrieval-Augmented Generation) platform that transforms unstructured data into AI-ready context. This involves designing event-driven ingestion pipelines, implementing semantic chunking strategies, and building vector database indexing workflows for optimal retrieval performance.
-					</Text>
-					<Text variant="body-default-l">
-						My technical foundation is built on Clean Architecture principles, Object-Oriented Programming (OOP), and Test-Driven Development (TDD). I believe in writing code that is not just functional but also readable, testable, and easy to maintain. This approach has been instrumental in delivering production-ready applications that scale.
-					</Text>
-				</Flex>
-			</RevealFx>
+
 
 			{/* Skills & Technologies Grid */}
 			<RevealFx translateY={12} delay={0.5}>
@@ -235,7 +220,7 @@ export default function Home(
 					</Flex>
 				</Flex>
 			)}
-			<Projects range={[2]} locale={locale} />
+
 			{contact.display &&
 				<ContactForm contact={contact} />
 			}

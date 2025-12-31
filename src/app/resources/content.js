@@ -70,9 +70,9 @@ const about = {
         link: 'https://cal.com/dharmikgohil'
     },
     intro: {
-        display: true,
+        display: false,
         title: 'Introduction',
-        description: <>I'm a Software Engineer specializing in backend development and AI infrastructure with hands-on experience in building scalable systems using TypeScript, AWS, PostgreSQL, and vector databases. Currently, I'm architecting IngestIQ.ai, a RAG platform transforming unstructured data into AI-ready context. I am passionate about Clean Architecture, OOP, and TDD.</>
+        description: <></>
     },
     work: {
         display: true,
@@ -81,7 +81,7 @@ const about = {
             {
                 company: 'Avesta (Avesta HQ → AvestaLabs)',
                 timeframe: 'Jul 2025 – Present',
-                role: 'Software Engineer — Product & AI Engineering',
+                role: 'Software Engineer - Product & AI Engineering',
                 achievements: [
                     <>Architecting IngestIQ.ai, a production-grade RAG platform for ingesting, chunking, embedding, and semantic retrieval.</>,
                     <>Built event-driven ingestion pipelines and vector DB indexing workflows.</>,
@@ -122,7 +122,7 @@ const about = {
         institutions: [
             {
                 name: 'Vishwakarma Government Engineering College',
-                description: <>B.E. in Computer Engineering — CGPA: 8.37/10</>,
+                description: <>B.E. in Computer Engineering - CGPA: 8.37/10</>,
             }
         ]
     },
@@ -166,7 +166,7 @@ const about = {
         display: true,
         title: 'Achievements',
         items: [
-            '2nd Prize Winner at Avesta AI Hackathon — “Kudos Wall”',
+            '2nd Prize Winner at Avesta AI Hackathon - “Kudos Wall”',
             'Solved 300+ LeetCode problems (Max Rating: 1470)',
             'Recognized as a top performer in Avesta internship'
         ]
