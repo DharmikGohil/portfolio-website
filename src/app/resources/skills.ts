@@ -22,7 +22,6 @@ export const skills: { category: string; items: Skill[] }[] = [
         items: [
             { name: "Node.js", icon: FaNodeJs },
             { name: "Express.js", icon: SiExpress },
-            { name: "NestJS", icon: SiNestjs },
             { name: "AWS", icon: FaAws },
             { name: "Docker", icon: FaDocker },
             { name: "Linux", icon: FaLinux },
@@ -37,11 +36,9 @@ export const skills: { category: string; items: Skill[] }[] = [
         items: [
             { name: "LangChain", icon: SiLangchain },
             { name: "OpenAI", icon: SiOpenai },
-            { name: "Hugging Face", icon: SiHuggingface },
             { name: "Pinecone", icon: FaDatabase },
             { name: "Weaviate", icon: FaDatabase },
             { name: "Python", icon: FaPython },
-            { name: "Supabase", icon: SiSupabase },
             { name: "Firebase", icon: SiFirebase },
         ]
     },
@@ -55,9 +52,7 @@ export const skills: { category: string; items: Skill[] }[] = [
             { name: "Next.js", icon: SiNextdotjs },
             { name: "React", icon: FaReact },
             { name: "Tailwind CSS", icon: SiTailwindcss },
-            { name: "HTML5", icon: FaHtml5 },
             { name: "CSS3", icon: FaCss3Alt },
-            { name: "GraphQL", icon: SiGraphql },
             { name: "Git", icon: FaGitAlt },
         ]
     },
