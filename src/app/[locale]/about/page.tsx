@@ -1,4 +1,4 @@
-import { Avatar, Button, Flex, Heading, Icon, IconButton, SmartImage, Tag, Text } from '@/once-ui/components';
+import { Avatar, Button, Flex, Heading, Icon, IconButton, SmartImage, Tag, Text, InlineCode } from '@/once-ui/components';
 import { baseURL, renderContent } from '@/app/resources';
 import ScrollProgressIndicator from '@/components/about/ScrollProgressIndicator';
 import styles from '@/components/about/about.module.scss'
@@ -209,10 +209,10 @@ export default function About(
                     <Flex fillWidth direction="column" gap="m" marginBottom="40">
                         <Heading as="h2" variant="display-strong-xs" wrap="balance">About Me</Heading>
                         <Text variant="body-default-l">
-                            I'm a Software Engineer specializing in backend development and AI infrastructure at AvestaLabs in Ahmedabad, India. With expertise in building production-grade systems, I focus on creating scalable, maintainable, and efficient solutions using modern technologies and best practices.
+                            I'm a Software Engineer specializing in backend development and AI infrastructure at <a href="https://avestalabs.ai" target="_blank" rel="noopener noreferrer" className={styles.inlineLink}><InlineCode>AvestaLabs.ai</InlineCode></a> in Ahmedabad, India. With expertise in building production-grade systems, I focus on creating scalable, maintainable, and efficient solutions using modern technologies and best practices.
                         </Text>
                         <Text variant="body-default-l">
-                            Currently, I'm architecting IngestIQ.ai, an enterprise RAG (Retrieval-Augmented Generation) platform that transforms unstructured data into AI-ready context. This involves designing event-driven ingestion pipelines, implementing semantic chunking strategies, and building vector database indexing workflows for optimal retrieval performance.
+                            Currently, I'm architecting <a href="https://ingestiq.ai" target="_blank" rel="noopener noreferrer" className={styles.inlineLink}><InlineCode>IngestIQ.ai</InlineCode></a>, an enterprise RAG (Retrieval-Augmented Generation) platform that transforms unstructured data into AI-ready context. This involves designing event-driven ingestion pipelines, implementing semantic chunking strategies, and building vector database indexing workflows for optimal retrieval performance.
                         </Text>
                         <Text variant="body-default-l">
                             My technical foundation is built on Clean Architecture principles, Object-Oriented Programming (OOP), and Test-Driven Development (TDD). I believe in writing code that is not just functional but also readable, testable, and easy to maintain. This approach has been instrumental in delivering production-ready applications that scale.

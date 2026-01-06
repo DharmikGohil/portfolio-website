@@ -15,7 +15,8 @@ const person = {
 const contact = {
     display: true,
     title: <>Get in touch with me</>,
-    description: <>Have a project in mind, want to collaborate, or just want to say hello? I'd love to hear from you! Fill out the form below and I'll get back to you as soon as possible.</>
+    description: <>Have a project in mind, want to collaborate, or just want to say hello? I'd love to hear from you! Fill out the form below and I'll get back to you as soon as possible.</>,
+    email: 'contact@dharmikgohil.in'
 }
 
 const social = [
@@ -37,7 +38,7 @@ const social = [
     {
         name: 'Email',
         icon: 'email',
-        link: 'mailto:dharmikgohil.dev@gmail.com',
+        link: 'mailto:contact@dharmikgohil.in',
     },
     {
         name: 'Twitter',

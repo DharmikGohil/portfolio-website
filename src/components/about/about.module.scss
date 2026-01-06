@@ -6,6 +6,24 @@
     }
 }
 
+.inlineLink {
+    text-decoration: none;
+    display: inline-block;
+    transition: var(--transition-micro-medium);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+        transform: translateY(-2px);
+
+        :global(.once-ui-inline-code) {
+            border-color: var(--brand-solid-strong);
+            background-color: var(--brand-alpha-weak);
+        }
+    }
+}
+
 .avatar {
     position: sticky;
     height: fit-content;
