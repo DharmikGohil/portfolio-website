@@ -97,7 +97,7 @@ const about = {
             },
             {
                 company: 'AvestaHQ.com',
-                companyUrl: 'https://aveackend om',
+                companyUrl: 'https://avestahq.com',
                 timeframe: 'Apr 2025 – Jul 2025',
                 role: 'Backend Software Engineer',
                 location: 'Ahmedabad, Gujarat',

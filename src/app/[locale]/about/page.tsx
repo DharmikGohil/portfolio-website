@@ -207,18 +207,25 @@ export default function About(
                         </Flex>
                     )}
 
-                    <Flex fillWidth direction="column" gap="m" marginBottom="40">
-                        <Heading as="h2" variant="display-strong-xs" wrap="balance">About Me</Heading>
-                        <Text variant="body-default-l">
+                    <Heading as="h2" variant="display-strong-s" marginBottom="m">About Me</Heading>
+                    <Flex
+                        fillWidth direction="column"
+                        radius="l"
+                        border="neutral-medium"
+                        borderStyle="solid-1"
+                        padding="l"
+                        gap="m"
+                        marginBottom="40">
+                        <Text variant="body-default-m">
                             I'm a Software Engineer specializing in Backend Development, AI Infrastructure, and Serverless Architecture at <a href="https://avestalabs.ai" target="_blank" rel="noopener noreferrer" className={styles.inlineLink}><InlineCode>AvestaLabs.ai</InlineCode></a> in Ahmedabad, India. Passionate about building scalable, intelligent systems that bridge data engineering and applied AI.
                         </Text>
-                        <Text variant="body-default-l">
+                        <Text variant="body-default-m">
                             I've architected and contributed to multiple Generative AI, RAG, and data ingestion platforms, leveraging AWS (Lambda, Step Functions, S3, OpenSearch) and LLMs (OpenAI, Gemini) to power production-grade AI workflows.
                         </Text>
-                        <Text variant="body-default-l">
+                        <Text variant="body-default-m">
                             I recently co-led the development of <a href="https://ingestiq.ai" target="_blank" rel="noopener noreferrer" className={styles.inlineLink}><InlineCode>IngestIQ.ai</InlineCode></a>, a unified data ingestion and semantic search platform that transforms unstructured sources into AI-ready datasets using RAG, LLMs, and vector search.
                         </Text>
-                        <Text variant="body-default-l">
+                        <Text variant="body-default-m">
                             I thrive on designing clean, maintainable systems, from TypeScript-based microservices to event-driven pipelines, guided by Clean Architecture, TDD, and Domain-Driven Design principles.
                         </Text>
                     </Flex>
