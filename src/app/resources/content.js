@@ -135,7 +135,21 @@ const about = {
         institutions: [
             {
                 name: 'Vishwakarma Government Engineering College',
-                description: <>B.E. in Computer Engineering - CGPA: 8.37/10</>,
+                degree: "Bachelor's of Engineering, Computer Engineering",
+                timeframe: 'Jun 2020 - Jul 2024',
+                description: <>CGPA: 8.37/10</>,
+            },
+            {
+                name: 'Shree Swaminarayan Gurukul, Taravada, Amreli',
+                degree: '12th Science (GSHEB)',
+                timeframe: 'Mar 2020',
+                description: <></>,
+            },
+            {
+                name: 'Shree Swaminarayan Gurukul, Taravada, Amreli',
+                degree: '10th Standard (GSEB)',
+                timeframe: 'Mar 2018',
+                description: <></>,
             }
         ]
     },

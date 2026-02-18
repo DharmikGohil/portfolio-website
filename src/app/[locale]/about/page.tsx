@@ -252,55 +252,116 @@ export default function About(
                     )}
 
                     {about.studies.display && (
-                        <Flex direction="column" gap="l" marginBottom="40">
+                        <>
                             <Heading as="h2" variant="display-strong-s" marginBottom="m">{about.studies.title}</Heading>
-                            <Flex direction="column" fillWidth gap="l">
+                            <Flex direction="column" gap="m" marginBottom="40">
                                 {about.studies.institutions.map((institution, index) => (
-                                    <Flex key={`${institution.name}-${index}`} fillWidth direction="column">
-                                        <Text id={institution.name} variant="heading-strong-l" marginBottom="4">{institution.name}</Text>
-                                        <Text variant="body-default-s" onBackground="neutral-weak">{institution.description}</Text>
+                                    <Flex
+                                        key={`${institution.name}-${index}`}
+                                        fillWidth direction="column"
+                                        radius="l"
+                                        border="neutral-medium"
+                                        borderStyle="solid-1"
+                                        padding="l"
+                                        gap="4">
+                                        <Flex fillWidth justifyContent="space-between" alignItems="flex-start">
+                                            <Flex direction="column" gap="4">
+                                                <Text variant="heading-strong-l">{institution.name}</Text>
+                                                <Text variant="body-default-m" onBackground="neutral-weak">{institution.degree}</Text>
+                                            </Flex>
+                                            <Text variant="body-default-m" onBackground="neutral-weak" style={{ whiteSpace: 'nowrap' }}>{institution.timeframe}</Text>
+                                        </Flex>
+                                        {institution.description && (
+                                            <Text variant="body-default-s" onBackground="neutral-weak" paddingTop="4">{institution.description}</Text>
+                                        )}
                                     </Flex>
                                 ))}
                             </Flex>
-                        </Flex>
+                        </>
                     )}
 
                     {about.challenges.display && (
-                        <Flex direction="column" gap="m" marginBottom="40">
-                            <Heading as="h2" variant="display-strong-xs">{about.challenges.title}</Heading>
-                            {about.challenges.cases.map((c, idx) => (
-                                <Text key={idx} variant="body-default-l"><b>{c.title}:</b> {c.description}</Text>
-                            ))}
-                        </Flex>
+                        <>
+                            <Heading as="h2" variant="display-strong-s" marginBottom="m">{about.challenges.title}</Heading>
+                            <Flex direction="column" gap="m" marginBottom="40">
+                                {about.challenges.cases.map((c, idx) => (
+                                    <Flex
+                                        key={idx}
+                                        fillWidth direction="column"
+                                        radius="l"
+                                        border="neutral-medium"
+                                        borderStyle="solid-1"
+                                        padding="l"
+                                        gap="8">
+                                        <Text variant="heading-strong-m">{c.title}</Text>
+                                        <Text variant="body-default-m" onBackground="neutral-weak">{c.description}</Text>
+                                    </Flex>
+                                ))}
+                            </Flex>
+                        </>
                     )}
 
                     {about.professional.display && (
-                        <Flex direction="column" gap="m" marginBottom="40">
-                            <Heading as="h2" variant="display-strong-xs">{about.professional.title}</Heading>
-                            {about.professional.items.map((item, idx) => (
-                                <Text key={idx} variant="body-default-l">- {item}</Text>
-                            ))}
-                        </Flex>
+                        <>
+                            <Heading as="h2" variant="display-strong-s" marginBottom="m">{about.professional.title}</Heading>
+                            <Flex
+                                fillWidth direction="column"
+                                radius="l"
+                                border="neutral-medium"
+                                borderStyle="solid-1"
+                                padding="l"
+                                gap="8"
+                                marginBottom="40">
+                                {about.professional.items.map((item, idx) => (
+                                    <Flex key={idx} gap="8" alignItems="flex-start">
+                                        <Text variant="body-default-m" style={{ minWidth: '6px' }}>•</Text>
+                                        <Text variant="body-default-m">{item}</Text>
+                                    </Flex>
+                                ))}
+                            </Flex>
+                        </>
                     )}
 
-                    {/* Certifications & Achievements at the end */}
                     {about.certifications.display && (
-                        <Flex direction="column" gap="m" marginBottom="40">
-                            <Heading as="h2" variant="display-strong-xs">{about.certifications.title}</Heading>
-                            {about.certifications.items.map((item, idx) => (
-                                <Text key={idx} variant="body-default-l">- {item}</Text>
-                            ))}
-                        </Flex>
+                        <>
+                            <Heading as="h2" variant="display-strong-s" marginBottom="m">{about.certifications.title}</Heading>
+                            <Flex
+                                fillWidth direction="column"
+                                radius="l"
+                                border="neutral-medium"
+                                borderStyle="solid-1"
+                                padding="l"
+                                gap="8"
+                                marginBottom="40">
+                                {about.certifications.items.map((item, idx) => (
+                                    <Flex key={idx} gap="8" alignItems="flex-start">
+                                        <Text variant="body-default-m" style={{ minWidth: '6px' }}>•</Text>
+                                        <Text variant="body-default-m">{item}</Text>
+                                    </Flex>
+                                ))}
+                            </Flex>
+                        </>
                     )}
 
-                    {/* Learning & Growth at the end */}
                     {about.learning.display && (
-                        <Flex direction="column" gap="m" marginBottom="40">
-                            <Heading as="h2" variant="display-strong-xs">{about.learning.title}</Heading>
-                            {about.learning.items.map((item, idx) => (
-                                <Text key={idx} variant="body-default-l">- {item}</Text>
-                            ))}
-                        </Flex>
+                        <>
+                            <Heading as="h2" variant="display-strong-s" marginBottom="m">{about.learning.title}</Heading>
+                            <Flex
+                                fillWidth direction="column"
+                                radius="l"
+                                border="neutral-medium"
+                                borderStyle="solid-1"
+                                padding="l"
+                                gap="8"
+                                marginBottom="40">
+                                {about.learning.items.map((item, idx) => (
+                                    <Flex key={idx} gap="8" alignItems="flex-start">
+                                        <Text variant="body-default-m" style={{ minWidth: '6px' }}>•</Text>
+                                        <Text variant="body-default-m">{item}</Text>
+                                    </Flex>
+                                ))}
+                            </Flex>
+                        </>
                     )}
                 </Flex>
             </Flex>
