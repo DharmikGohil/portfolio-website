@@ -1,6 +1,7 @@
 import { Avatar, Button, Flex, Heading, Icon, IconButton, SmartImage, Tag, Text, InlineCode } from '@/once-ui/components';
 import { baseURL, renderContent } from '@/app/resources';
 import ScrollProgressIndicator from '@/components/about/ScrollProgressIndicator';
+import ExperienceCard from '@/components/about/ExperienceCard';
 import styles from '@/components/about/about.module.scss'
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
@@ -209,13 +210,16 @@ export default function About(
                     <Flex fillWidth direction="column" gap="m" marginBottom="40">
                         <Heading as="h2" variant="display-strong-xs" wrap="balance">About Me</Heading>
                         <Text variant="body-default-l">
-                            I'm a Software Engineer specializing in backend development and AI infrastructure at <a href="https://avestalabs.ai" target="_blank" rel="noopener noreferrer" className={styles.inlineLink}><InlineCode>AvestaLabs.ai</InlineCode></a> in Ahmedabad, India. With expertise in building production-grade systems, I focus on creating scalable, maintainable, and efficient solutions using modern technologies and best practices.
+                            I'm a Software Engineer specializing in Backend Development, AI Infrastructure, and Serverless Architecture at <a href="https://avestalabs.ai" target="_blank" rel="noopener noreferrer" className={styles.inlineLink}><InlineCode>AvestaLabs.ai</InlineCode></a> in Ahmedabad, India. Passionate about building scalable, intelligent systems that bridge data engineering and applied AI.
                         </Text>
                         <Text variant="body-default-l">
-                            Currently, I'm architecting <a href="https://ingestiq.ai" target="_blank" rel="noopener noreferrer" className={styles.inlineLink}><InlineCode>IngestIQ.ai</InlineCode></a>, an enterprise RAG (Retrieval-Augmented Generation) platform that transforms unstructured data into AI-ready context. This involves designing event-driven ingestion pipelines, implementing semantic chunking strategies, and building vector database indexing workflows for optimal retrieval performance.
+                            I've architected and contributed to multiple Generative AI, RAG, and data ingestion platforms, leveraging AWS (Lambda, Step Functions, S3, OpenSearch) and LLMs (OpenAI, Gemini) to power production-grade AI workflows.
                         </Text>
                         <Text variant="body-default-l">
-                            My technical foundation is built on Clean Architecture principles, Object-Oriented Programming (OOP), and Test-Driven Development (TDD). I believe in writing code that is not just functional but also readable, testable, and easy to maintain. This approach has been instrumental in delivering production-ready applications that scale.
+                            I recently co-led the development of <a href="https://ingestiq.ai" target="_blank" rel="noopener noreferrer" className={styles.inlineLink}><InlineCode>IngestIQ.ai</InlineCode></a>, a unified data ingestion and semantic search platform that transforms unstructured sources into AI-ready datasets using RAG, LLMs, and vector search.
+                        </Text>
+                        <Text variant="body-default-l">
+                            I thrive on designing clean, maintainable systems, from TypeScript-based microservices to event-driven pipelines, guided by Clean Architecture, TDD, and Domain-Driven Design principles.
                         </Text>
                     </Flex>
 
@@ -228,10 +232,21 @@ export default function About(
                                 marginBottom="m">
                                 {about.work.title}
                             </Heading>
-                            <Flex direction="column" gap="l" marginBottom="40">
-                                {/* <Heading as="h2" variant="display-strong-xs">Work Experience</Heading> */}
-                                <Text variant="body-default-l"><b>Avesta Technologies (Apr 2025 - Present):</b> Backend AI Software Engineer<br />- Built RAG-based pipeline for a knowledge chatbot using event-driven architecture<br />- Implemented AWS Lambda functions for data processing (PostgreSQL, Elasticsearch)<br />- Serverless backend systems: cost-efficient, scalable, clean code<br />- TDD, modular development, layered design</Text>
-                                <Text variant="body-default-l"><b>Avesta Technologies (Jul 2024 - Apr 2025):</b> Backend Developer Intern<br />- Developed RESTful APIs (Node.js + Express, OOP, TDD)<br />- System design for scalable apps<br />- MySQL, Elasticsearch, AWS, Linux<br />- Clean architecture, efficient data flow, production-grade code</Text>
+                            <Flex direction="column" gap="m" marginBottom="40">
+                                {about.work.experiences.map((experience, index) => (
+                                    <ExperienceCard
+                                        key={`${experience.company}-${index}`}
+                                        company={experience.company}
+                                        companyUrl={experience.companyUrl}
+                                        role={experience.role}
+                                        timeframe={experience.timeframe}
+                                        location={experience.location}
+                                        type={experience.type}
+                                        achievements={experience.achievements}
+                                        techStack={experience.techStack}
+                                        defaultExpanded={index === 0}
+                                    />
+                                ))}
                             </Flex>
                         </>
                     )}

@@ -1,6 +1,6 @@
 {
     "person": {
-        "role": "Backend + Data + AI Engineer"
+        "role": "AI Product Engineer @AvestaLabs.ai | Building Ingestiq.ai"
     },
     "contact": {
         "title": "Get in touch with me",
@@ -10,9 +10,9 @@
     "home": {
         "label": "Home",
         "title": "{name}'s Portfolio",
-        "description": "Backend + Data + AI Engineer specializing in system design, RAG chatbots, and scalable architectures",
-        "headline": "Backend + Data + AI Engineer",
-        "subline": "I'm Dharmik, currently working at Avesta Technologies where I design RAG-based chatbots and serverless data processing pipelines. I'm passionate about clean architecture, test-driven development, and building systems that are reliable, performant, and easy to maintain."
+        "description": "AI Product Engineering @AvestaLabs.ai, Building Ingestiq.ai, an Agentic RAG Platform. Software Engineer with a product mindset.",
+        "headline": "AI Product Engineering @AvestaLabs.ai",
+        "subline": "I'm Dharmik, building Ingestiq.ai, an Agentic RAG Platform. Software Engineer specializing in Backend Development, AI Infrastructure, and Serverless Architecture. Passionate about building scalable, intelligent systems that bridge data engineering and applied AI."
     },
     "about": {
         "label": "About",
@@ -20,20 +20,25 @@
         "description": "Meet {name}, {role} from Ahmedabad, Gujarat",
         "intro": {
             "title": "Introduction",
-            "description": "I'm a Backend + Data + AI Engineer passionate about system design and building scalable, event-driven architectures. I currently work at Avesta Technologies where I am currently designing RAG-based chatbots and serverless data processing pipelines using AWS Lambda, PostgreSQL, and Elasticsearch. I strongly believe in writing clean code, practicing with test-driven development, and building systems that are reliable, performant, and easy to maintain."
+            "description": "I'm a Software Engineer specializing in Backend Development, AI Infrastructure, and Serverless Architecture. Passionate about building scalable, intelligent systems that bridge data engineering and applied AI. Currently at AvestaLabs, I've architected and contributed to multiple Generative AI, RAG, and data ingestion platforms, leveraging AWS (Lambda, Step Functions, S3, OpenSearch) and LLMs (OpenAI, Gemini) to power production-grade AI workflows. I recently co-led the development of Ingestiq.ai, a unified data ingestion and semantic search platform that transforms unstructured sources into AI-ready datasets using RAG, LLMs, and vector search."
         },
         "work": {
             "title": "Work Experience",
             "experiences": {
-                "Avesta Technologies": {
-                    "timeframe": "Apr 2025 - Present",
-                    "role": "Backend AI Software Engineer",
-                    "achievements": "Currently building an RAG-based pipeline for a knowledge-based chatbot using event-driven architecture;Implemented AWS Lambda functions to process/manage data from PostgreSQL and Elasticsearch;Built serverless backend systems with a focus on cost-efficiency, scalability, and clean code;Practiced TDD, modular development, and layered design principles"
+                "AvestaLabs.ai": {
+                    "timeframe": "Jul 2025 - Present",
+                    "role": "Software Engineer, Product & AI Engineering",
+                    "achievements": "Architecting IngestIQ.ai, a production-grade RAG platform for ingesting, chunking, embedding, and semantic retrieval;Built event-driven ingestion pipelines and vector database indexing workflows;Integrated Model Context Protocol (MCP) for structured agent context;Implemented query embeddings and LLM-based semantic chunking to improve retrieval accuracy and contextual relevance across the RAG pipeline"
                 },
-                "Avesta Technologies Intern": {
+                "AvestaHQ.com, Backend Software Engineer": {
+                    "timeframe": "Apr 2025 - Jul 2025",
+                    "role": "Backend Software Engineer",
+                    "achievements": "Built serverless backend pipelines to process and migrate CSV and structured data to MySQL using AWS Lambda and Step Functions;Designed database schemas and implemented layered architecture with unit, integration, and E2E tests, ensuring reliable processing of thousands of records daily;Developed ETL workflows integrating MySQL and Elasticsearch for ingestion, transformation, and search indexing;Ensured production readiness, scalability, and observability through proper error handling, retry logic, logging, and TDD"
+                },
+                "AvestaHQ.com, Intern": {
                     "timeframe": "Jul 2024 - Apr 2025",
-                    "role": "Backend Developer Intern",
-                    "achievements": "Developed RESTful APIs using Node.js + Express with focus on OOP and TDD;Applied system design principles for scalable applications;Hands-on experience with MySQL, Elasticsearch, AWS services, and Linux;Focused on clean architecture, efficient data flow, and production-grade code"
+                    "role": "Software Engineer Intern",
+                    "achievements": "Developed REST APIs using Node.js and Express.js following OOP and clean code practices;Worked with AWS, Elasticsearch, and MySQL for backend systems;Implemented unit, integration, and E2E tests for production readiness;Practiced Test-Driven Development (TDD)"
                 }
             }
         },
@@ -51,14 +56,20 @@
         "technical": {
             "title": "Technical Skills",
             "skills": {
-                "Backend Development": {
-                    "description": "Node.js, Express.js, AWS Lambda, REST APIs, Event-Driven Architecture, Clean Code Principles, TDD"
+                "Backend": {
+                    "description": "Node.js, TypeScript, Express.js"
                 },
-                "Databases & Search": {
-                    "description": "PostgreSQL, MySQL, Elasticsearch, Data Processing, Serverless Architecture"
+                "AI Systems": {
+                    "description": "RAG, Agents, LLM Integration, Vector Databases"
                 },
-                "Programming Languages": {
-                    "description": "JavaScript/TypeScript, Python, PHP, C#, SQL with focus on OOP and system design"
+                "Cloud & Infra": {
+                    "description": "AWS Lambda, Step Functions, S3, OpenSearch, PostgreSQL, MySQL"
+                },
+                "Architecture": {
+                    "description": "Clean Architecture, Layered Design, TDD, Event-Driven Systems"
+                },
+                "Core CS": {
+                    "description": "SDLC, Data Structures & Algorithms, Compilers"
                 }
             }
         }

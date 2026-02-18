@@ -6,7 +6,7 @@ const person = {
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
-    role: 'Software Engineer - Backend & AI Infrastructure',
+    role: 'AI Product Engineer @AvestaLabs.ai | Building Ingestiq.ai',
     avatar: '/images/avatar.jpg',
     location: 'Ahmedabad, Gujarat, India',
     languages: ['English', 'Hindi', 'Gujarati']
@@ -16,7 +16,7 @@ const contact = {
     display: true,
     title: <>Get in touch with me</>,
     description: <>Have a project in mind, want to collaborate, or just want to say hello? I'd love to hear from you! Fill out the form below and I'll get back to you as soon as possible.</>,
-    email: 'contact@dharmikgohil.in'
+    email: 'gohildharmik2020@gmail.com'
 }
 
 const social = [
@@ -38,7 +38,7 @@ const social = [
     {
         name: 'Email',
         icon: 'email',
-        link: 'mailto:contact@dharmikgohil.in',
+        link: 'mailto:gohildharmik2020@gmail.com',
     },
     {
         name: 'Twitter',
@@ -49,10 +49,10 @@ const social = [
 
 const home = {
     label: 'Home',
-    title: `${person.name} | Backend & AI Infrastructure Engineer`,
-    description: `Dharmik Gohil is a Software Engineer specializing in backend development, AI infrastructure, RAG systems, and scalable architectures. Building IngestIQ.ai and enterprise solutions.`,
-    headline: <>Software Engineer - Backend & AI Infrastructure</>,
-    subline: <>I'm Dharmik, a Software Engineer at <InlineCode>AvestaLabs</InlineCode> specializing in building scalable systems and AI infrastructure. I'm passionate about Clean Architecture, OOP, and TDD, currently building IngestIQ.ai.</>
+    title: `${person.name} | AI Product Engineer`,
+    description: `Dharmik Gohil, AI Product Engineering @AvestaLabs.ai. Building Ingestiq.ai, an Agentic RAG Platform. Software Engineer with a product mindset who loves solving problems.`,
+    headline: <>AI Product Engineer </>,
+    subline: <>I'm Dharmik, building <InlineCode>Ingestiq.ai</InlineCode>, an Agentic RAG Platform. Software Engineer with a product mindset specializing in Backend Development, AI Infrastructure, and Serverless Architecture. Passionate about building scalable, intelligent systems that bridge data engineering and applied AI.</>
 }
 
 const about = {
@@ -80,39 +80,51 @@ const about = {
         title: 'Work Experience',
         experiences: [
             {
-                company: 'Avesta (Avesta HQ → AvestaLabs)',
+                company: 'AvestaLabs.ai',
+                companyUrl: 'https://avestalabs.ai',
                 timeframe: 'Jul 2025 – Present',
-                role: 'Software Engineer - Product & AI Engineering',
+                role: 'Software Engineer, Product & AI Engineering',
+                location: 'Ahmedabad, Gujarat',
+                type: 'Full Time',
                 achievements: [
                     <>Architecting IngestIQ.ai, a production-grade RAG platform for ingesting, chunking, embedding, and semantic retrieval.</>,
-                    <>Built event-driven ingestion pipelines and vector DB indexing workflows.</>,
+                    <>Built event-driven ingestion pipelines and vector database indexing workflows.</>,
                     <>Integrated Model Context Protocol (MCP) for structured agent context.</>,
-                    <>Implemented questions embeddings and LLM-based semantic chunking to improve retrieval accuracy and contextual relevance across the RAG pipeline.</>
+                    <>Implemented query embeddings and LLM-based semantic chunking to improve retrieval accuracy and contextual relevance across the RAG pipeline.</>
                 ],
+                techStack: ['TypeScript', 'RAG', 'MCP', 'AWS', 'PostgreSQL', 'Vector DBs', 'Docker', 'Clean Architecture'],
                 images: []
             },
             {
-                company: 'Avesta (Avesta HQ)',
+                company: 'AvestaHQ.com',
+                companyUrl: 'https://aveackend om',
                 timeframe: 'Apr 2025 – Jul 2025',
                 role: 'Backend Software Engineer',
+                location: 'Ahmedabad, Gujarat',
+                type: 'Full Time',
                 achievements: [
                     <>Built serverless backend pipelines to process and migrate CSV and structured data to MySQL using AWS Lambda and Step Functions.</>,
-                    <>Designed database schema and implemented layered architecture with unit, integration, and E2E tests.</>,
+                    <>Designed database schemas and implemented layered architecture with unit, integration, and E2E tests, ensuring reliable processing of thousands of records daily.</>,
                     <>Developed ETL workflows integrating MySQL and Elasticsearch for ingestion, transformation, and search indexing.</>,
                     <>Ensured production readiness, scalability, and observability through proper error handling, retry logic, logging, and TDD.</>
                 ],
+                techStack: ['TypeScript', 'AWS Lambda', 'Step Functions', 'Elasticsearch', 'MySQL', 'TDD', 'Serverless', 'Clean Architecture'],
                 images: []
             },
             {
-                company: 'Avesta (Avesta HQ)',
+                company: 'AvestaHQ.com',
+                companyUrl: 'https://avestahq.com',
                 timeframe: 'Jul 2024 – Apr 2025',
                 role: 'Software Engineer Intern',
+                location: 'Ahmedabad, Gujarat',
+                type: 'Internship',
                 achievements: [
                     <>Developed REST APIs using Node.js and Express.js following OOP and clean code practices.</>,
                     <>Worked with AWS, Elasticsearch, and MySQL for backend systems.</>,
                     <>Implemented unit, integration, and E2E tests for production readiness.</>,
-                    <>Implemented code with TDD.</>
+                    <>Practiced Test-Driven Development (TDD).</>
                 ],
+                techStack: ['Node.js', 'Express.js', 'MySQL', 'AWS', 'Elasticsearch', 'OOP', 'TDD'],
                 images: []
             }
         ]
@@ -132,33 +144,28 @@ const about = {
         title: 'Technical Skills',
         skills: [
             {
-                title: 'Languages',
-                description: <>TypeScript, JavaScript, Java, SQL, Python</>,
+                title: 'Backend',
+                description: <>Node.js, TypeScript, Express.js</>,
                 images: []
             },
             {
-                title: 'Frameworks',
-                description: <>Node.js, Express.js, Next.js, React</>,
-                images: []
-            },
-            {
-                title: 'Databases',
-                description: <>PostgreSQL, MySQL, Elasticsearch, Vector DBs</>,
+                title: 'AI Systems',
+                description: <>RAG, Agents, LLM Integration, Vector Databases</>,
                 images: []
             },
             {
                 title: 'Cloud & Infra',
-                description: <>AWS, Docker, Linux</>,
+                description: <>AWS Lambda, Step Functions, S3, OpenSearch, PostgreSQL, MySQL</>,
                 images: []
             },
             {
-                title: 'AI & RAG',
-                description: <>Retrieval-Augmented Generation (RAG), MCP, Semantic Search, Embeddings, LangChain</>,
+                title: 'Architecture',
+                description: <>Clean Architecture, Layered Design, TDD, Event-Driven Systems</>,
                 images: []
             },
             {
-                title: 'Practices',
-                description: <>Clean Architecture, OOP, TDD, Event-Driven Programming, System Design</>,
+                title: 'Core CS',
+                description: <>SDLC, Data Structures & Algorithms, Compilers</>,
                 images: []
             }
         ]
@@ -207,14 +214,14 @@ const about = {
 
 const blog = {
     label: 'Blog',
-    title: 'Blog | Backend Engineering & System Design Insights',
-    description: `Technical articles by ${person.name} on backend development, system design, RAG pipelines, and building scalable AI infrastructure.`
+    title: 'Blog | AI Product Engineering & Backend Insights',
+    description: `Technical articles by ${person.name} on AI infrastructure, RAG pipelines, backend development, and building scalable systems.`
 }
 
 const work = {
     label: 'Work',
-    title: 'Projects | Backend & AI Engineering Portfolio',
-    description: `Explore ${person.name}'s portfolio of backend engineering and AI projects including IngestIQ, RAG systems, and enterprise solutions.`
+    title: 'Projects | AI Product Engineering & Backend Portfolio',
+    description: `Explore ${person.name}'s portfolio of AI product engineering and backend projects including Ingestiq.ai, RAG systems, and enterprise solutions.`
 }
 
 const helpfulStuff = {
