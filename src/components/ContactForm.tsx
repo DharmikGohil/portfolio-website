@@ -183,7 +183,7 @@ export const ContactForm = (
                     borderStyle="solid-1"
                     marginBottom="m">
                     <Text onBackground="danger-medium" variant="body-default-s">
-                        Sorry, there was an error sending your message. Please try again or contact me directly at gohildharmik2020@gmail.com
+                        Sorry, there was an error sending your message. Please try again or contact me directly at dharmikgohil.dev@gmail.com
                     </Text>
                 </Flex>
             )}

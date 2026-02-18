@@ -16,7 +16,7 @@ const contact = {
     display: true,
     title: <>Get in touch with me</>,
     description: <>Have a project in mind, want to collaborate, or just want to say hello? I'd love to hear from you! Fill out the form below and I'll get back to you as soon as possible.</>,
-    email: 'gohildharmik2020@gmail.com'
+    email: 'dharmikgohil.dev@gmail.com'
 }
 
 const social = [
@@ -38,7 +38,7 @@ const social = [
     {
         name: 'Email',
         icon: 'email',
-        link: 'mailto:gohildharmik2020@gmail.com',
+        link: 'mailto:dharmikgohil.dev@gmail.com',
     },
     {
         name: 'Twitter',

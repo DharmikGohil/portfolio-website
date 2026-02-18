@@ -125,7 +125,7 @@ Visit the live portfolio at: [dharmikgohil.vercel.app](https://dharmikgohil.verc
 
 ## 📞 Contact
 
-- **Email**: gohildharmik2020@gmail.com
+- **Email**: dharmikgohil.dev@gmail.com
 - **LinkedIn**: [linkedin.com/in/dharmikgohil](https://linkedin.com/in/dharmikgohil)
 - **GitHub**: [github.com/dharmikgohil](https://github.com/dharmikgohil)
 

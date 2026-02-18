@@ -41,7 +41,7 @@ export default async function handler(
             console.log('Attempting to send email...');
             await resend.emails.send({
                 from: process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev',
-                to: process.env.RESEND_TO_EMAIL || 'gohildharmik2020@gmail.com',
+                to: process.env.RESEND_TO_EMAIL || 'dharmikgohil.dev@gmail.com',
                 subject: `New Contact Form Submission from ${name}`,
                 html: `
                     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
