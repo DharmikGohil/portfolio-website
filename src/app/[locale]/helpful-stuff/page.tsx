@@ -1,14 +1,15 @@
 import React from 'react';
-import { Flex, Heading, Text } from '@/once-ui/components';
+import { Flex, Heading, Text, Tag, Icon } from '@/once-ui/components';
 import styles from './HelpfulStuff.module.scss';
 
 const categories = [
   {
     title: 'Books',
+    icon: 'book' as const,
     resources: [
       {
         title: "Designing Data-Intensive Applications (PDF)",
-        type: "Book (PDF)",
+        type: "Book",
         description: "A must-read book for anyone interested in building scalable, reliable, and maintainable systems. Covers data modeling, storage, distributed systems, and more.",
         link: "https://github.com/letthedataconfess/Data-Engineering-Books/blob/main/Book-2Designing-data-intensive-applications.pdf",
       },
@@ -16,6 +17,7 @@ const categories = [
   },
   {
     title: 'Blog Posts',
+    icon: 'openLink' as const,
     resources: [
       {
         title: "Getting Started with CI/CD: An Introductory Guide to GitHub Actions for New Developers",
@@ -63,13 +65,14 @@ const categories = [
   },
   {
     title: 'Playlists',
+    icon: 'spotify' as const,
     resources: [
       {
         title: "locked in",
-        type: "Spotify Playlist",
+        type: "Spotify",
         description: "A cinematic and inspiring playlist curated by Amrit. Features tracks from Hans Zimmer, Ludwig Göransson, Trent Reznor, and more. Perfect for deep work or creative sessions.",
         link: "https://open.spotify.com/playlist/7qAqw0o2NXjiNpa5k4WcqE?nd=1&dlsi=744a513071d840cf",
-        credit: "by @amritwt (https://x.com/amritwt)"
+        credit: "by @amritwt"
       },
     ],
   },
@@ -77,53 +80,49 @@ const categories = [
 
 export default function HelpfulStuffPage() {
   return (
-    <>
-      <Flex fillWidth maxWidth="s" direction="column">
-        <Heading marginBottom="l" variant="display-strong-s">
-          Helpful Stuff
-        </Heading>
-        <Flex direction="column" gap="xl" fillWidth>
-          {categories.map((cat, catIdx) => (
-            <Flex key={catIdx} direction="column" gap="l" fillWidth>
-              <Heading as="h2" variant="display-strong-xs" marginBottom="m">
-                {cat.title}
-              </Heading>
-              <Flex direction="column" gap="l" fillWidth>
-                {cat.resources.map((res, idx) => (
+    <Flex fillWidth maxWidth="m" direction="column">
+      <Heading marginBottom="l" variant="display-strong-s">
+        Helpful Stuff
+      </Heading>
+      <Flex direction="column" gap="xl" fillWidth>
+        {categories.map((cat, catIdx) => (
+          <Flex key={catIdx} direction="column" gap="m" fillWidth>
+            <Heading as="h2" variant="display-strong-xs">
+              {cat.title}
+            </Heading>
+            <Flex direction="column" gap="m" fillWidth>
+              {cat.resources.map((res, idx) => (
+                <a
+                  key={idx}
+                  href={res.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.cardLink}>
                   <Flex
-                    key={idx}
                     direction="column"
-                    className={styles.resourceCard}
-                  >
-                    <Heading as="h3" variant="display-strong-xs" marginBottom="xs">
-                      {res.title}{' '}
-                      <Text as="span" variant="body-default-m" onBackground="neutral-weak">
-                        ({res.type})
-                      </Text>
-                    </Heading>
-                    <Text as="p" variant="body-default-l" marginBottom="m">
-                      {res.description}
-                    </Text>
-                    <a
-                      href={res.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={styles.resourceLink}
-                    >
-                      {res.type === 'Book (PDF)' ? 'Read Book' : res.type === 'Spotify Playlist' ? 'Listen on Spotify' : 'Read Blog'}
-                    </a>
-                    {res.credit && (
-                      <Text as="span" variant="body-default-s" onBackground="neutral-weak" marginTop="xs">
+                    gap="8"
+                    className={styles.resourceCard}>
+                    <Flex justifyContent="space-between" alignItems="flex-start" gap="m">
+                      <Flex direction="column" gap="4" style={{ flex: 1 }}>
+                        <Text variant="heading-strong-m">{res.title}</Text>
+                        <Text variant="body-default-s" onBackground="neutral-weak">
+                          {res.description}
+                        </Text>
+                      </Flex>
+                      <Tag size="s">{res.type}</Tag>
+                    </Flex>
+                    {'credit' in res && res.credit && (
+                      <Text variant="body-default-s" onBackground="neutral-weak">
                         {res.credit}
                       </Text>
                     )}
                   </Flex>
-                ))}
-              </Flex>
+                </a>
+              ))}
             </Flex>
-          ))}
-        </Flex>
+          </Flex>
+        ))}
       </Flex>
-    </>
+    </Flex>
   );
 }
